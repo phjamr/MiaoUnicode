@@ -8,9 +8,9 @@ The Latin script counterpart and base for the design comes from Adobe Source San
 
 <em>Copyright 2010, 2012 Adobe Systems Incorporated (http://www.adobe.com/), with Reserved Font Name 'Source'. All Rights Reserved. Source is a trademark of Adobe Systems Incorporated in the United States and/or other countries.
 
-This Font Software is licensed under the SIL Open Font License, Version 1.1.
+<em>This Font Software is licensed under the SIL Open Font License, Version 1.1.
 
-This license is copied below, and is also available with a FAQ at: http://scripts.sil.org/OFL </em>
+<em>This license is copied below, and is also available with a FAQ at: http://scripts.sil.org/OFL
 
 [ssp]:http://sourceforge.net/projects/sourcesans.adobe/
 
