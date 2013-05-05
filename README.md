@@ -2,7 +2,7 @@
 
 "Miao Unicode" is a Graphite enabled font for the Miao (Pollard) script used by several language communities in southern China.
 
-The script was added to Unicode in January 2012 with version 6.1.0. "Miao Unicode" appears to be the first font to be publicly released which covers this Unicode block.
+The script was added to Unicode in January 2012 with version 6.1.0. "Miao Unicode" appears to be the first publicly available font which covers this Unicode block.
 
 Adobe's open source font ["Source Sans Pro"][ssp] provides the Latin script counterpart for the font and the base for the Miao design.
 
