@@ -6,11 +6,11 @@ The Latin script counterpart and base for the design comes from Adobe Source San
 
 [ADOBE SOURCE SANS PRO][ssp]
 
-<em>Copyright 2010, 2012 Adobe Systems Incorporated (http://www.adobe.com/), with Reserved Font Name 'Source'. All Rights Reserved. Source is a trademark of Adobe Systems Incorporated in the United States and/or other countries.
+*Copyright 2010, 2012 Adobe Systems Incorporated (http://www.adobe.com/), with Reserved Font Name 'Source'. All Rights Reserved. Source is a trademark of Adobe Systems Incorporated in the United States and/or other countries.*
 
-<em>This Font Software is licensed under the SIL Open Font License, Version 1.1.
+*This Font Software is licensed under the SIL Open Font License, Version 1.1.*
 
-<em>This license is copied below, and is also available with a FAQ at: http://scripts.sil.org/OFL
+*This license is copied below, and is also available with a FAQ at: http://scripts.sil.org/OFL*
 
 [ssp]:http://sourceforge.net/projects/sourcesans.adobe/
 
