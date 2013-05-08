@@ -114,6 +114,7 @@ table(glyph)
   clsFina = (U+16F54..U+16F7E);
   clsFinaRight = (U+16F54..U+16F7E);
   clsFinaTopRight = (U+16F54..U+16F7E);
+  gA = (U+16F54); // height 59 compared to standard height 219
 
 /* finals in PUA compressed on y-axis for positioning above or below the initial: "norm" height 200m or 230m, bottom join; "top" height 230m, top join; "desc" height 278m, top join */
   clsFinaYcmpNorm = ((U+EC54..U+EC62),
@@ -341,7 +342,7 @@ table(pos) { MUnits = 1000 }
   clsFinaRight {shift.y = 219m} / _ clsFina? clsFina? clsFina? clsFina? clsFina? gRight ;
   clsFinaTopRight {shift.y = 438m} / _ clsFina? clsFina? clsFina? clsFina? clsFina? gTopRight ;
 
-/* kern baseline finals */
+/* kern baseline finals without also kerning them at topright position */
   clsFina {kern.x = -140m} / clsInitLoMajKern clsAsp? _ ;
   clsFina {kern.x =  -40m} / clsInitLoMinKern clsAsp? _ ;
 endpass; // pass2
@@ -351,6 +352,12 @@ pass(3)
   clsFinaTopRight {kern.x = -140m} / clsInitHiMajKern clsAsp? _ clsFina? clsFina? clsFina? gTopRight ;
   clsFinaTopRight {kern.x =  -90m} / clsInitHiMinKern clsAsp? _ clsFina? clsFina? clsFina? gTopRight ;
  endpass; //pass3
+
+pass(4)
+/* shift the "a" vowel up an extra notch for right and topright */
+  gA {shift.y = 219m+80m} / _ clsFina? clsFina? clsFina? clsFina? clsFina? gRight ;
+  gA {shift.y = 438m+160m} / _ clsFina? clsFina? clsFina? clsFina? clsFina? gTopRight ;
+ endpass; //pass4
 endtable;
 
 
