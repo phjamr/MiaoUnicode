@@ -8,7 +8,7 @@ Adobe's open source font ["Source Sans Pro"][ssp] provides the Latin script coun
 
 Since the Miao script involves complex rendering (such as vowel marks being raised/lowered according to the tone) the font will only behave correctly in applications which provide Graphite support. These include Mozilla Firefox (11+), LibreOffice (3.4+), OpenOffice (3.2+), Xetex (0.997+). In most Linux distributions the pango-graphite package can enable Graphite support for applications like Inkscape and gedit as well. For more information see http://graphite.sil.org/.
 
-The Lisu (Fraser) script, also used in southern China and neighbouring areas, is also included in this font as it may be helpful to have a matching design. Lisu is already supported by other fonts, including the [Noto][noto] project.
+The Lisu (Fraser) script, also used in southern China and neighbouring areas, is included in this font as it may be helpful to have a matching design. Lisu is already supported by other fonts, including the [Noto][noto] project.
 
 [ssp]:http://sourceforge.net/projects/sourcesans.adobe/
 [noto]:https://code.google.com/p/noto/wiki/NotoSansLisu
