@@ -102,11 +102,11 @@ table(glyph)
                        U+16F22, U+16F37, U+16F38,
                        U+16F43, U+16F44)
     { AspLoMajS = point(bb.right-80m, bb.bottom-50m) } ;
-  clsInitLoMinKern = (U+16F20, U+16F3C)
+  clsInitLoMinKern = (U+16F20, U+16F33, U+16F34, U+16F3C)
     { AspLoMinS = point(bb.right+10m, bb.bottom-50m) } ;
   clsInitLoNoKern = ((U+16F00..U+16F06),
                      (U+16F0E..U+16F1F),
-                     (U+16F23..U+16F36),
+                     (U+16F23..U+16F32), U+16F35, U+16F36,
                      (U+16F39..U+16F3B),
                      (U+16F3D..U+16F42))
     { AspLoS = point(bb.right+90m, bb.bottom-50m) } ;
