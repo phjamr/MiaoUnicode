@@ -89,11 +89,12 @@ table(glyph)
                       U+16F2A, U+16F2B, U+16F3D,
                       U+16F3E, U+16F40, U+16F41)
     { AspHiMajS = point(bb.right-80m, bb.bottom+700m) } ;
-  clsInitHiMinKern = (U+16F02, U+16F2D, U+16F2E)
+  clsInitHiMinKern = (U+16F02)
     { AspHiMinS = point(bb.right-30m, bb.bottom+700m) } ;
   clsInitHiNoKern = ((U+16F00..U+16F01),
                      (U+16F03..U+16F15),
-                     (U+16F1E..U+16F1F), U+16F2C,
+                     (U+16F1E..U+16F1F),
+                     (U+16F2C..U+16F2E),
                      (U+16F2F..U+16F3C), U+16F3F,
                      (U+16F42..U+16F44))
     { AspHiS = point(bb.right+90m, bb.bottom+700m) } ;
