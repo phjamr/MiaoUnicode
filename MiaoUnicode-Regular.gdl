@@ -3,240 +3,169 @@
 ExtraAscent  = 250m;
 ExtraDescent = 100m;
 
+#define OPT_FINA_SEQ [[clsFina? clsFina]? clsFina]?
+
 table(glyph) {AttributeOverride = true};
 
-/* define initials */
-  gPa = U+16F00;
-  gBa = U+16F01;
-  gPaYi = U+16F02;
-  gPla = U+16F03;
-  gMa = U+16F04;
-  gMha = U+16F05;
-  gMaArch = U+16F06;
-  gFa = U+16F07;
-  gVa = U+16F08;
-  gVfa = U+16F09;
-  gTa = U+16F0A;
-  gDa = U+16F0B;
-  gTtaYi = U+16F0C;
-  gTaYi = U+16F0D;
-  gTta = U+16F0E;
-  gDda = U+16F0F;
-  gNa = U+16F10;
-  gNha = U+16F11;
-  gNnaYi = U+16F12;
-  gNaArch = U+16F13;
-  gNna = U+16F14;
-  gNnha = U+16F15;
-  gLa = U+16F16;
-  gLya = U+16F17;
-  gLha = U+16F18;
-  gLhya = U+16F19;
-  gTlha = U+16F1A;
-  gDlha = U+16F1B;
-  gTlhya = U+16F1C;
-  gDlhya = U+16F1D;
-  gKa = U+16F1E;
-  gGa = U+16F1F;
-  gKaYi = U+16F20;
-  gQa = U+16F21;
-  gQga = U+16F22;
-  gNga = U+16F23;
-  gNgha = U+16F24;
-  gNgaArch = U+16F25;
-  gHa = U+16F26;
-  gXa = U+16F27;
-  gGha = U+16F28;
-  gGhha = U+16F29;
-  gTssa = U+16F2A;
-  gDzza = U+16F2B;
-  gNya = U+16F2C;
-  gNyha = U+16F2D;
-  gTsha = U+16F2E;
-  gDzha = U+16F2F;
-  gTshaYi = U+16F30;
-  gDzhaYi = U+16F31;
-  gTshaRef = U+16F32;
-  gSha = U+16F33;
-  gSsa = U+16F34;
-  gZha = U+16F35;
-  gZsha = U+16F36;
-  gTsa = U+16F37;
-  gDza = U+16F38;
-  gTsaYi = U+16F39;
-  gSa = U+16F3A;
-  gZa = U+16F3B;
-  gZsa = U+16F3C;
-  gZza = U+16F3D;
-  gZzsa = U+16F3E;
-  gZzaArch = U+16F3F;
-  gZzya = U+16F40;
-  gZzsya = U+16F41;
-  gWa = U+16F42;
-  gAh = U+16F43;
-  gHha = U+16F44;
+/* initials */
+  gPa = postscript("miao_pa");  // U+16F00·𖼀
+  gBa = postscript("miao_ba");  // U+16F01·𖼁
+  gPaYi = postscript("miao_yi_pa");  // U+16F02·𖼂
+  gPla = postscript("miao_pla");  // U+16F03·𖼃
+  gMa = postscript("miao_ma");  // U+16F04·𖼄
+  gMha = postscript("miao_mha");  // U+16F05·𖼅
+  gMaArch = postscript("miao_arch_ma");  // U+16F06·𖼆
+  gFa = postscript("miao_fa");  // U+16F07·𖼇
+  gVa = postscript("miao_va");  // U+16F08·𖼈
+  gVfa = postscript("miao_vfa");  // U+16F09·𖼉
+  gTa = postscript("miao_ta");  // U+16F0A·𖼊
+  gDa = postscript("miao_da");  // U+16F0B·𖼋
+  gTtaYi = postscript("miao_yi_tta");  // U+16F0C·𖼌
+  gTaYi = postscript("miao_yi_ta");  // U+16F0D·𖼍
+  gTta = postscript("miao_tta");  // U+16F0E·𖼎
+  gDda = postscript("miao_dda");  // U+16F0F·𖼏
+  gNa = postscript("miao_na");  // U+16F10·𖼐
+  gNha = postscript("miao_nha");  // U+16F11·𖼑
+  gNnaYi = postscript("miao_yi_nna");  // U+16F12·𖼒
+  gNaArch = postscript("miao_arch_na");  // U+16F13·𖼓
+  gNna = postscript("miao_nna");  // U+16F14·𖼔
+  gNnha = postscript("miao_nnha");  // U+16F15·𖼕
+  gLa = postscript("miao_la");  // U+16F16·𖼖
+  gLya = postscript("miao_lya");  // U+16F17·𖼗
+  gLha = postscript("miao_lha");  // U+16F18·𖼘
+  gLhya = postscript("miao_lhya");  // U+16F19·𖼙
+  gTlha = postscript("miao_tlha");  // U+16F1A·𖼚
+  gDlha = postscript("miao_dlha");  // U+16F1B·𖼛
+  gTlhya = postscript("miao_tlhya");  // U+16F1C·𖼜
+  gDlhya = postscript("miao_dlhya");  // U+16F1D·𖼝
+  gKa = postscript("miao_ka");  // U+16F1E·𖼞
+  gGa = postscript("miao_ga");  // U+16F1F·𖼟
+  gKaYi = postscript("miao_yi_ka");  // U+16F20·𖼠
+  gQa = postscript("miao_qa");  // U+16F21·𖼡
+  gQga = postscript("miao_qga");  // U+16F22·𖼢
+  gNga = postscript("miao_nga");  // U+16F23·𖼣
+  gNgha = postscript("miao_ngha");  // U+16F24·𖼤
+  gNgaArch = postscript("miao_arch_nga");  // U+16F25·𖼥
+  gHa = postscript("miao_ha");  // U+16F26·𖼦
+  gXa = postscript("miao_xa");  // U+16F27·𖼧
+  gGha = postscript("miao_gha");  // U+16F28·𖼨
+  gGhha = postscript("miao_ghha");  // U+16F29·𖼩
+  gTssa = postscript("miao_tssa");  // U+16F2A·𖼪
+  gDzza = postscript("miao_dzza");  // U+16F2B·𖼫
+  gNya = postscript("miao_nya");  // U+16F2C·𖼬
+  gNyha = postscript("miao_nyha");  // U+16F2D·𖼭
+  gTsha = postscript("miao_tsha");  // U+16F2E·𖼮
+  gDzha = postscript("miao_dzha");  // U+16F2F·𖼯
+  gTshaYi = postscript("miao_yi_tsha");  // U+16F30·𖼰
+  gDzhaYi = postscript("miao_yi_dzha");  // U+16F31·𖼱
+  gTshaRef = postscript("miao_ref_tsha");  // U+16F32·𖼲
+  gSha = postscript("miao_sha");  // U+16F33·𖼳
+  gSsa = postscript("miao_ssa");  // U+16F34·𖼴
+  gZha = postscript("miao_zha");  // U+16F35·𖼵
+  gZsha = postscript("miao_zsha");  // U+16F36·𖼶
+  gTsa = postscript("miao_tsa");  // U+16F37·𖼷
+  gDza = postscript("miao_dza");  // U+16F38·𖼸
+  gTsaYi = postscript("miao_yi_tsa");  // U+16F39·𖼹
+  gSa = postscript("miao_sa");  // U+16F3A·𖼺
+  gZa = postscript("miao_za");  // U+16F3B·𖼻
+  gZsa = postscript("miao_zsa");  // U+16F3C·𖼼
+  gZza = postscript("miao_zza");  // U+16F3D·𖼽
+  gZzsa = postscript("miao_zzsa");  // U+16F3E·𖼾
+  gZzaArch = postscript("miao_arch_zza");  // U+16F3F·𖼿
+  gZzya = postscript("miao_zzya");  // U+16F40·𖽀
+  gZzsya = postscript("miao_zzsya");  // U+16F41·𖽁
+  gWa = postscript("miao_wa");  // U+16F42·𖽂
+  gAh = postscript("miao_ah");  // U+16F43·𖽃
+  gHha = postscript("miao_hha");  // U+16F44·𖽄
 
-/* define modifiers */
-  gNasal = U+16F50;
-  gAsp = U+16F51;
-  gVoiRef = U+16F52;
-  gAspRef = U+16F53;
+/* stylistic alternates */
+  gShaSalt = postscript("miao_sha.salt");  // U+16F33 Stylistic·𖼳
+  gSsaSalt = postscript("miao_ssa.salt");  // U+16F34 Stylistic·𖼴
 
-/* define finals */
-  gA = U+16F54;  // height 59m compared to standard height 219m
-  gAa = U+16F55;
-  gAhh = U+16F56;
-  gAn = U+16F57;
-  gAng = U+16F58;
-  gO = U+16F59;
-  gOo = U+16F5A;
-  gWo = U+16F5B;
-  gW = U+16F5C;
-  gE = U+16F5D;
-  gEn = U+16F5E;
-  gEng = U+16F5F;
-  gOey = U+16F60;
-  gI = U+16F61;
-  gIa = U+16F62;
-  gIan = U+16F63;
-  gIang = U+16F64;
-  gIo = U+16F65;
-  gIe = U+16F66;
-  gIi = U+16F67;
-  gIu = U+16F68;
-  gIng = U+16F69;
-  gU = U+16F6A;
-  gUa = U+16F6B;
-  gUan = U+16F6C;
-  gUang = U+16F6D;
-  gUu = U+16F6E;
-  gUei = U+16F6F;
-  gUng = U+16F70;
-  gY = U+16F71;
-  gYi = U+16F72;
-  gAe = U+16F73;
-  gAee = U+16F74;
-  gErr = U+16F75;
-  gErrRnd = U+16F76;
-  gEr = U+16F77;
-  gErRnd = U+16F78;
-  gAi = U+16F79;
-  gEi = U+16F7A;
-  gAu = U+16F7B;
-  gOu = U+16F7C;
-  gN = U+16F7D;
-  gNg = U+16F7E;
+/* Chuxiong 'wart' variants */
+/* NB unnecessary to include attachment points for tone positions as tones shown by letter not position in Chuxiong, but here anyway */
+  gBaChux = postscript("miao_ba.chux");  // U+16F01 Chuxiong·𖼁
+  gMhaChux = postscript("miao_mha.chux");  // U+16F05 Chuxiong·𖼅
+  gVfaChux = postscript("miao_vfa.chux");  // U+16F09 Chuxiong·𖼉
+  gDaChux = postscript("miao_da.chux");  // U+16F0B Chuxiong·𖼋
+  gDdaChux = postscript("miao_dda.chux");  // U+16F0F Chuxiong·𖼏
+  gNhaChux = postscript("miao_nha.chux");  // U+16F11 Chuxiong·𖼑
+  gNnhaChux = postscript("miao_nnha.chux");  // U+16F15 Chuxiong·𖼕
+  gLyaChux = postscript("miao_lya.chux");  // U+16F17 Chuxiong·𖼗
+  gLhyaChux = postscript("miao_lhya.chux");  // U+16F19 Chuxiong·𖼙
+  gDlhaChux = postscript("miao_dlha.chux");  // U+16F1B Chuxiong·𖼛
+  gDlhyaChux = postscript("miao_dlhya.chux");  // U+16F1D Chuxiong·𖼝
+  gGaChux = postscript("miao_ga.chux");  // U+16F1F Chuxiong·𖼟
+  gQgaChux = postscript("miao_qga.chux");  // U+16F22 Chuxiong·𖼢
+  gNghaChux = postscript("miao_ngha.chux");  // U+16F24 Chuxiong·𖼤
+  gGhhaChux = postscript("miao_ghha.chux");  // U+16F29 Chuxiong·𖼩
+  gDzzaChux = postscript("miao_dzza.chux");  // U+16F2B Chuxiong·𖼫
+  gTshaChux = postscript("miao_tsha.chux");  // U+16F2E Chuxiong·𖼮
+  gTshaYiChux = postscript("miao_yi_tsha.chux");  // U+16F30 Chuxiong·𖼰
+  gZshaChux = postscript("miao_zsha.chux");  // U+16F36 Chuxiong·𖼶
+  gDzaChux = postscript("miao_dza.chux");  // U+16F38 Chuxiong·𖼸
+  gZsaChux = postscript("miao_zsa.chux");  // U+16F3C Chuxiong·𖼼
+  gZzsaChux = postscript("miao_zzsa.chux");  // U+16F3E Chuxiong·𖼾
+  gZzsyaChux = postscript("miao_zzsya.chux");  // U+16F41 Chuxiong·𖽁
+  gHhaChux = postscript("miao_hha.chux");  // U+16F44 Chuxiong·𖽄
 
-/* define tone positions */
-  gRightMark = U+16F8F;
-  gTopRightMark = U+16F90;
-  gAboveMark = U+16F91;
-  gBelowMark = U+16F92;
+/* main 69 initials in unicode block */
+  clsInitStd = (
+gPa, gBa, gPaYi, gPla,
+gMa, gMha, gMaArch,
+gFa, gVa, gVfa,
+gTa, gDa, gTtaYi,
+gTaYi, gTta, gDda,
+gNa, gNha, gNnaYi,
+gNaArch, gNna, gNnha,
+gLa, gLya, gLha, gLhya,
+gTlha, gDlha, gTlhya, gDlhya,
+gKa, gGa, gKaYi, gQa, gQga,
+gNga, gNgha, gNgaArch,
+gHa, gXa, gGha, gGhha,
+gTssa, gDzza, gNya,
+gNyha, gTsha,
+gDzha, gTshaYi, gDzhaYi, gTshaRef,
+gSha, gSsa, gZha, gZsha,
+gTsa, gDza, gTsaYi,
+gSa, gZa, gZsa,
+gZza, gZzsa, gZzaArch,
+gZzya, gZzsya, gWa, gAh, gHha
+  );
 
-/* define tone letters */
-  gTone2 = U+16F93;
-  gTone3 = U+16F94;
-  gTone4 = U+16F95;
-  gTone5 = U+16F96;
-  gTone6 = U+16F97;
-  gTone7 = U+16F98;
-  gTone8 = U+16F99;
-  gTone1Ref = U+16F9A;
-  gTone2Ref = U+16F9B;
-  gTone4Ref = U+16F9C;
-  gTone5Ref = U+16F9D;
-  gTone6Ref = U+16F9E;
-  gTone8Ref = U+16F9F;
+/* stylistic alternates class */
+  clsInitSaltStd = (gSha,     gSsa);
+  clsInitSalt    = (gShaSalt, gSsaSalt);
 
-  clsInitAlignC  = (U+16F2D, U+16F2E, U+16F35, U+16F36,
-                    U+16F08, U+16F09, U+16F2A, U+16F2B,
-                    U+16F32, (U+16F37..U+16F39),
-                   (U+16F3A..U+16F3E))
-    { aboveNormS = point(bb.width/2, bb.top+90m) ;
-      aboveTopS  = point(bb.width/2, bb.top+320m) ;
-      aboveDescS = point(bb.width/2, bb.top+340m) ;
+/* standard 'wart' class */
+  clsWartStd = (gBa, gMha, gVfa,
+                gDa, gDda, gNha, gNnha,
+                gLya, gLhya, gDlha, gDlhya,
+                gGa, gQga, gNgha,
+                gGhha, gDzza, gTsha,
+                gTshaYi, gZsha, gDza, gZsa,
+                gZzsa, gZzsya, gHha);
 
-      belowNormS = point(bb.width/2, bb.bottom-320m) ;
-      belowTopS  = point(bb.width/2, bb.bottom-90m) ;
-      belowDescS = point(bb.width/2, bb.bottom-70m) } ;
+/* Chuxiong 'wart' class */
+  clsWartChux = (gBaChux, gMhaChux, gVfaChux,
+                 gDaChux, gDdaChux, gNhaChux, gNnhaChux,
+                 gLyaChux, gLhyaChux, gDlhaChux, gDlhyaChux,
+                 gGaChux, gQgaChux, gNghaChux,
+                 gGhhaChux, gDzzaChux, gTshaChux,
+                 gTshaYiChux, gZshaChux, gDzaChux, gZsaChux,
+                 gZzsaChux, gZzsyaChux, gHhaChux);
 
-  clsInitAlignL1 = (U+16F16, U+16F17, U+16F19)
-    { aboveNormS = point(bb.width/2-50m, bb.top+90m) ;
-      aboveTopS  = point(bb.width/2-50m, bb.top+320m) ;
-      aboveDescS = point(bb.width/2-50m, bb.top+340m) ;
+  clsInit = (clsInitStd, clsInitSalt, clsWartChux);
 
-      belowNormS = point(bb.width/2-50m, bb.bottom-320m) ;
-      belowTopS  = point(bb.width/2-50m, bb.bottom-90m) ;
-      belowDescS = point(bb.width/2-50m, bb.bottom-70m) } ;
-
-  clsInitAlignL2 = (U+16F19, U+16F04, U+16F05, U+16F18)
-    { aboveNormS = point(bb.width/2-30m, bb.top+90m) ;
-      aboveTopS  = point(bb.width/2-30m, bb.top+320m) ;
-      aboveDescS = point(bb.width/2-30m, bb.top+340m) ;
-
-      belowNormS = point(bb.width/2-30m, bb.bottom-320m) ;
-      belowTopS  = point(bb.width/2-30m, bb.bottom-90m) ;
-      belowDescS = point(bb.width/2-30m, bb.bottom-70m) } ;
-
-  clsInitAlignR1 = ((U+16F10..U+16F12),
-                    (U+16F2F..U+16F31))
-    { aboveNormS = point(bb.width/2+100m, bb.top+90m) ;
-      aboveTopS  = point(bb.width/2+100m, bb.top+320m) ;
-      aboveDescS = point(bb.width/2+100m, bb.top+340m) ;
-
-      belowNormS = point(bb.width/2+100m, bb.bottom-320m) ;
-      belowTopS  = point(bb.width/2+100m, bb.bottom-90m) ;
-      belowDescS = point(bb.width/2+100m, bb.bottom-70m) } ;
-
-  clsInitAlignR2 = ((U+16F00..U+16F03),
-                    (U+16F1E..U+16F20), U+16F0E)
-    { aboveNormS = point(bb.width/2+70m, bb.top+90m) ;
-      aboveTopS  = point(bb.width/2+70m, bb.top+320m) ;
-      aboveDescS = point(bb.width/2+70m, bb.top+340m) ;
-
-      belowNormS = point(bb.width/2+70m, bb.bottom-320m) ;
-      belowTopS  = point(bb.width/2+70m, bb.bottom-90m) ;
-      belowDescS = point(bb.width/2+70m, bb.bottom-70m) } ;
-
-  clsInitAlignR3 = (U+16F06, U+16F07, U+16F11,
-                    U+16F14, U+16F26, U+16F27,
-                    U+16F2C, U+16F33, U+16F41)
-    { aboveNormS = point(bb.width/2+50m, bb.top+90m) ;
-      aboveTopS  = point(bb.width/2+50m, bb.top+320m) ;
-      aboveDescS = point(bb.width/2+50m, bb.top+340m) ;
-
-      belowNormS = point(bb.width/2+50m, bb.bottom-320m) ;
-      belowTopS  = point(bb.width/2+50m, bb.bottom-90m) ;
-      belowDescS = point(bb.width/2+50m, bb.bottom-70m) } ;
-
-  clsInitAlignR4 = ((U+16F0A..U+16F0F), U+16F13, U+16F15,
-                    (U+16F1A..U+16F1D), (U+16F21..U+16F25),
-                    U+16F28, U+16F29, U+16F34, U+16F3F,
-                    U+16F40, (U+16F42..U+16F44))
-    { aboveNormS = point(bb.width/2+30m, bb.top+90m) ;
-      aboveTopS  = point(bb.width/2+30m, bb.top+320m) ;
-      aboveDescS = point(bb.width/2+30m, bb.top+340m) ;
-
-      belowNormS = point(bb.width/2+30m, bb.bottom-320m) ;
-      belowTopS  = point(bb.width/2+30m, bb.bottom-90m) ;
-      belowDescS = point(bb.width/2+30m, bb.bottom-70m) } ;
-
-  clsInit = (clsInitAlignC,
-             clsInitAlignL1,
-             clsInitAlignL2,
-             clsInitAlignR1,
-             clsInitAlignR2,
-             clsInitAlignR3,
-             clsInitAlignR4);
-
+/* high kerning for A shape letters */
   clsInitHiMajKern = (gLa, gLya, gLha, gLhya,
                       gTlha, gDlha, gTlhya, gDlhya,
                       gTssa, gDzza, gZza, gZzsa, gZzaArch,
                       gZzya, gZzsya)
-    { AspHiMajS = point(bb.right-70m, bb.bottom+700m) } ;
-  clsInitHiMinKern = (gPaYi)
-    { AspHiMinS = point(bb.right-30m, bb.bottom+700m) } ;
-  clsInitHiNoKern = (gPa, gBa, gPla, gMa, gMha, gMaArch, gFa,
+    { aspHiS = point(bb.right-60m, bb.bottom+700m) } ;
+  clsInitHiMinKern = (gPaYi, gMaArch)
+    { aspHiS = point(bb.right-10m, bb.bottom+700m) } ;
+  clsInitHiNoKern = (gPa, gBa, gPla, gMa, gMha, gFa,
                      gVa, gVfa, gTa, gDa, gTtaYi, gTaYi, gTta, gDda,
                      gNa, gNha, gNnaYi, gNaArch, gNna, gNnha,
                      gKa, gGa, gKaYi, gQa, gQga, gNga, gNgha,
@@ -244,18 +173,28 @@ table(glyph) {AttributeOverride = true};
                      gNya, gNyha, gTsha, gDzha, gTshaYi, gDzhaYi,
                      gTshaRef, gSha, gSsa, gZha, gZsha,
                      gTsa, gDza, gTsaYi, gSa, gZa, gZsa,
-                     gWa, gAh, gHha)
-    { AspHiS = point(bb.right+90m, bb.bottom+700m) } ;
+                     gWa, gAh, gHha,
+                     clsWartChux, clsInitSalt)
+    { aspHiS = point(bb.right+90m, bb.bottom+700m) } ;
 
+/* mid kerning for C shape letters */
   clsInitMidMajKern = (gFa, gTa, gDa, gTaYi, gTta, gDda,
                        gNa, gNha, gNnaYi,
                        gLa, gLya, gQa, gQga,
-                       gTssa, gDzza, gNya, gDzha, gTsha, gTshaRef);
+                       gTssa, gDzza, gNya, gDzha, gTsha, gTshaRef
+                       gBaChux, gMhaChux, gVfaChux,
+                       gDaChux, gDdaChux, gNhaChux, gNnhaChux,
+                       gLyaChux,
+                       gGaChux, gQgaChux, gNghaChux,
+                       gGhhaChux, gDzzaChux, gTshaChux,
+                       gTshaYiChux, gZshaChux,   gZsaChux,
+                       gHhaChux);
   clsInitMidMinKern = (gPaYi, gVa, gVfa
                        gTlha, gDlha, gTlhya, gDlhya,
                        gKaYi, gNyha, gTsha,
                        gZza, gZzsa, gZzya, gZzsya,
-                       gAh, gHha);
+                       gAh, gHha,
+                       gDlhaChux, gDlhyaChux, gZzsaChux, gZzsyaChux);
   clsInitMidNoKern  = (gPa, gBa, gPla, gMa, gMha, gMaArch,
                        gTtaYi, gNaArch, gNna, gNnha,
                        gLha, gLhya, gKa, gGa, 
@@ -263,16 +202,27 @@ table(glyph) {AttributeOverride = true};
                        gHa, gXa, gGha, gGhha, gDzhaYi,
                        gSha, gSsa, gZha, gZsha,
                        gTsa, gDza, gTsaYi,
-                       gSa, gZa, gZsa, gZzaArch, gWa);
+                       gSa, gZa, gZsa, gZzaArch, gWa
+                       clsInitSalt, gLhyaChux, gDzaChux);
 
+/* low kerning for V shape letters */
+  clsInitLoChuxKern = (gVfaChux, gDaChux, gQgaChux,
+                       gHhaChux)
+    { aspLoS = point(bb.right-250m, bb.bottom-50m) } ;
   clsInitLoMajKern = (gFa, gVa, gVfa,
-                      gTa, gDa, gTtaYi, gTaYi,
+                      gTa, gDa, gTtaYi,
                       gQa, gQga,
-                      gTsa, gDza,
-                      gAh, gHha)
-    { AspLoMajS = point(bb.right-80m, bb.bottom-50m) } ;
-  clsInitLoMinKern = (gKaYi, gSha, gSsa, gTsaYi)
-    { AspLoMinS = point(bb.right+10m, bb.bottom-50m) } ;
+                      gAh, gHha,
+                      gBaChux, gDdaChux,
+                      gNhaChux, gNnhaChux, gGaChux, gNghaChux,
+                      gGhhaChux, gTshaChux, gTshaYiChux,
+                      gDzaChux, gZshaChux, gZsaChux)
+    { aspLoS = point(bb.right-50m, bb.bottom-50m) } ;
+  clsInitLoMinKern = (gTaYi, gKaYi,
+                      gTsa, gDza, gTsaYi,
+                      gSha, gSsa,
+                      gMhaChux)
+    { aspLoS = point(bb.right+10m, bb.bottom-50m) } ;
   clsInitLoNoKern = (gPa, gBa, gPaYi, gPla, gMa, gMha, gMaArch,
                      gTta, gDda,
                      gNa, gNha, gNnaYi, gNaArch, gNna, gNnha,
@@ -284,48 +234,293 @@ table(glyph) {AttributeOverride = true};
                      gTssa, gDzza, gNya, gNyha, gTsha,
                      gDzha, gTshaYi, gDzhaYi, gTshaRef,
                      gZha, gZsha, gSa, gZa, gZsa,
-                     gZza, gZzsa, gZzaArch, gZzya, gZzsya, gWa)
-    { AspLoS = point(bb.right+90m, bb.bottom-50m) } ;
+                     gZza, gZzsa, gZzaArch, gZzya, gZzsya, gWa,
+                     clsInitSalt,
+                     gLyaChux, gLhyaChux, gDlhaChux, gDlhyaChux,
+                     gDzzaChux, gZzsaChux, gZzsyaChux)
+    { aspLoS = point(bb.right+90m, bb.bottom-50m) } ;
 
-  clsFina = (U+16F54..U+16F7E);
+/* S(tationary) attachment points for above and below position */
+  clsInitAlignC  = (gVa, gVfa, gTssa, gDzza,
+                    gNyha, gTsha, gZha, gZsha,
+                    gTshaRef, gTsa, gDza, gTsaYi,
+                    gSa, gZa, gZsa, gZza, gZzsa)
+    { aboveNormS = point(bb.width/2, bb.top+90m) ;
+      aboveTopS  = point(bb.width/2, bb.top+320m) ;
+      aboveDescS = point(bb.width/2, bb.top+340m) ;
+      belowNormS = point(bb.width/2, bb.bottom-320m) ;
+      belowTopS  = point(bb.width/2, bb.bottom-90m) ;
+      belowDescS = point(bb.width/2, bb.bottom-70m) } ;
 
-/* finals in PUA compressed on y-axis for positioning above or below the initial: "norm" height 200m or 230m, bottom join; "top" height 230m, top join; "desc" height 278m, top join */
-  clsFinaYcmpNorm = ((U+EC54..U+EC62),
-                     (U+EC65..U+EC67),
-                     (U+EC6A..U+EC7E))
+  clsInitAlignL1 = (gLa, gLya, gLhya)
+    { aboveNormS = point(bb.width/2-50m, bb.top+90m) ;
+      aboveTopS  = point(bb.width/2-50m, bb.top+320m) ;
+      aboveDescS = point(bb.width/2-50m, bb.top+340m) ;
+      belowNormS = point(bb.width/2-50m, bb.bottom-320m) ;
+      belowTopS  = point(bb.width/2-50m, bb.bottom-90m) ;
+      belowDescS = point(bb.width/2-50m, bb.bottom-70m) } ;
+
+  clsInitAlignL2 = (gMa, gMha, gLha
+                    gBaChux, gMhaChux, gVfaChux,
+                    gDaChux, gDdaChux, gNhaChux, gNnhaChux,
+                    gLyaChux, gLhyaChux, gDlhaChux, gDlhyaChux,
+                    gGaChux, gQgaChux, gNghaChux,
+                    gGhhaChux, gDzzaChux, gTshaChux,
+                    gTshaYiChux, gZshaChux, gDzaChux, gZsaChux,
+                    gZzsaChux, gZzsyaChux, gHhaChux)
+    { aboveNormS = point(bb.width/2-30m, bb.top+90m) ;
+      aboveTopS  = point(bb.width/2-30m, bb.top+320m) ;
+      aboveDescS = point(bb.width/2-30m, bb.top+340m) ;
+      belowNormS = point(bb.width/2-30m, bb.bottom-320m) ;
+      belowTopS  = point(bb.width/2-30m, bb.bottom-90m) ;
+      belowDescS = point(bb.width/2-30m, bb.bottom-70m) } ;
+
+  clsInitAlignR1 = (gNa, gNha, gNnaYi,
+                    gDzha, gTshaYi, gDzhaYi)
+    { aboveNormS = point(bb.width/2+100m, bb.top+90m) ;
+      aboveTopS  = point(bb.width/2+100m, bb.top+320m) ;
+      aboveDescS = point(bb.width/2+100m, bb.top+340m) ;
+      belowNormS = point(bb.width/2+100m, bb.bottom-320m) ;
+      belowTopS  = point(bb.width/2+100m, bb.bottom-90m) ;
+      belowDescS = point(bb.width/2+100m, bb.bottom-70m) } ;
+
+  clsInitAlignR2 = (gPa, gBa, gPaYi, gPla,
+                    gKa, gGa, gKaYi, gTta)
+    { aboveNormS = point(bb.width/2+70m, bb.top+90m) ;
+      aboveTopS  = point(bb.width/2+70m, bb.top+320m) ;
+      aboveDescS = point(bb.width/2+70m, bb.top+340m) ;
+      belowNormS = point(bb.width/2+70m, bb.bottom-320m) ;
+      belowTopS  = point(bb.width/2+70m, bb.bottom-90m) ;
+      belowDescS = point(bb.width/2+70m, bb.bottom-70m) } ;
+
+  clsInitAlignR3 = (gMaArch, gFa, gNha,
+                    gNna, gHa, gXa,
+                    gNya, gSha, gShaSalt, gZzsya)
+    { aboveNormS = point(bb.width/2+50m, bb.top+90m) ;
+      aboveTopS  = point(bb.width/2+50m, bb.top+320m) ;
+      aboveDescS = point(bb.width/2+50m, bb.top+340m) ;
+      belowNormS = point(bb.width/2+50m, bb.bottom-320m) ;
+      belowTopS  = point(bb.width/2+50m, bb.bottom-90m) ;
+      belowDescS = point(bb.width/2+50m, bb.bottom-70m) } ;
+
+  clsInitAlignR4 = (gTa, gDa, gTtaYi, gTaYi, gTta, gDda,
+                    gNaArch, gNnha,
+                    gTlha, gDlha, gTlhya, gDlhya,
+                    gQa, gQga, gNga, gNgha, gNgaArch,
+                    gGha, gGhha, gSsa, gSsaSalt,
+                    gZzaArch, gZzya, gWa, gAh, gHha)
+    { aboveNormS = point(bb.width/2+30m, bb.top+90m) ;
+      aboveTopS  = point(bb.width/2+30m, bb.top+320m) ;
+      aboveDescS = point(bb.width/2+30m, bb.top+340m) ;
+      belowNormS = point(bb.width/2+30m, bb.bottom-320m) ;
+      belowTopS  = point(bb.width/2+30m, bb.bottom-90m) ;
+      belowDescS = point(bb.width/2+30m, bb.bottom-70m) } ;
+
+/* modifiers */
+  gNasal = postscript("miao_nasal");  // U+16F50·𖽐
+  gAsp = postscript("miao_asp");  // U+16F51·	𖽑
+  gVoiRef = postscript("miao_ref_voice");  // U+16F52·	𖽒
+  gAspRef = postscript("miao_ref_asp");  // U+16F53·	𖽓
+
+  clsAsp = (gAsp, gVoiRef, gAspRef);
+  clsAspHi = (gAsp, gVoiRef)
+    { aspHiM = point(bb.left, bb.top) } ;
+  clsAspLo = (gAspRef)
+    { aspLoM = point(bb.left, bb.bottom) } ;
+
+/* finals */
+  gA = postscript("miao_a");  // U+16F54·	𖽔
+    /* gA height 59m compared to standard height 219m */
+  gAa = postscript("miao_aa");  // U+16F55·	𖽕
+  gAhh = postscript("miao_ahh");  // U+16F56·	𖽖
+  gAn = postscript("miao_an");  // U+16F57·	𖽗
+  gAng = postscript("miao_ang");  // U+16F58·	𖽘
+  gO = postscript("miao_o");  // U+16F59·	𖽙
+  gOo = postscript("miao_oo");  // U+16F5A·	𖽚
+  gWo = postscript("miao_wo");  // U+16F5B·	𖽛
+  gW = postscript("miao_w");  // U+16F5C·	𖽜
+  gE = postscript("miao_e");  // U+16F5D·	𖽝
+  gEn = postscript("miao_en");  // U+16F5E·	𖽞
+  gEng = postscript("miao_eng");  // U+16F5F·	𖽟
+  gOey = postscript("miao_oey");  // U+16F60·	𖽠
+  gI = postscript("miao_i");  // U+16F61·	𖽡
+  gIa = postscript("miao_ia");  // U+16F62·	𖽢
+  gIan = postscript("miao_ian");  // U+16F63·	𖽣
+  gIang = postscript("miao_iang");  // U+16F64·	𖽤
+  gIo = postscript("miao_io");  // U+16F65·	𖽥
+  gIe = postscript("miao_ie");  // U+16F66·	𖽦
+  gIi = postscript("miao_ii");  // U+16F67·	𖽧
+  gIu = postscript("miao_iu");  // U+16F68·	𖽨
+  gIng = postscript("miao_ing");  // U+16F69·	𖽩
+  gU = postscript("miao_u");  // U+16F6A·	𖽪
+  gUa = postscript("miao_ua");  // U+16F6B·	𖽫
+  gUan = postscript("miao_uan");  // U+16F6C·	𖽬
+  gUang = postscript("miao_uang");  // U+16F6D·	𖽭
+  gUu = postscript("miao_uu");  // U+16F6E·	𖽮
+  gUei = postscript("miao_uei");  // U+16F6F·	𖽯
+  gUng = postscript("miao_ung");  // U+16F70·	𖽰
+  gY = postscript("miao_y");  // U+16F71·	𖽱
+  gYi = postscript("miao_yi");  // U+16F72·	𖽲
+  gAe = postscript("miao_ae");  // U+16F73·	𖽳
+  gAee = postscript("miao_aee");  // U+16F74·	𖽴
+  gErr = postscript("miao_err");  // U+16F75·	𖽵
+  gErrRnd = postscript("miao_round_err");  // U+16F76·	𖽶
+  gEr = postscript("miao_er");  // U+16F77·	𖽷
+  gErRnd = postscript("miao_round_er");  // U+16F78·	𖽸
+  gAi = postscript("miao_ai");  // U+16F79·	𖽹
+  gEi = postscript("miao_ei");  // U+16F7A·	𖽺
+  gAu = postscript("miao_au");  // U+16F7B·	𖽻
+  gOu = postscript("miao_ou");  // U+16F7C·	𖽼
+  gN = postscript("miao_n");  // U+16F7D·	𖽽
+  gNg = postscript("miao_ng");  // U+16F7E·	𖽾
+
+/* finals compressed on y-axis for above and below positions */
+  gAYcmp = postscript("miao_a.ycmp");  // U+16F54 compressed·	𖽔
+  gAaYcmp = postscript("miao_aa.ycmp");  // U+16F55 compressed·	𖽕
+  gAhhYcmp = postscript("miao_ahh.ycmp");  // U+16F56 compressed·	𖽖
+  gAnYcmp = postscript("miao_an.ycmp");  // U+16F57 compressed·	𖽗
+  gAngYcmp = postscript("miao_ang.ycmp");  // U+16F58 compressed·	𖽘
+  gOYcmp = postscript("miao_o.ycmp");  // U+16F59 compressed·	𖽙
+  gOoYcmp = postscript("miao_oo.ycmp");  // U+16F5A compressed·	𖽚
+  gWoYcmp = postscript("miao_wo.ycmp");  // U+16F5B compressed·	𖽛
+  gWYcmp = postscript("miao_w.ycmp");  // U+16F5C compressed·	𖽜
+  gEYcmp = postscript("miao_e.ycmp");  // U+16F5D compressed·	𖽝
+  gEnYcmp = postscript("miao_en.ycmp");  // U+16F5E compressed·	𖽞
+  gEngYcmp = postscript("miao_eng.ycmp");  // U+16F5F compressed·	𖽟
+  gOeyYcmp = postscript("miao_oey.ycmp");  // U+16F60 compressed·	𖽠
+  gIYcmp = postscript("miao_i.ycmp");  // U+16F61 compressed·	𖽡
+  gIaYcmp = postscript("miao_ia.ycmp");  // U+16F62 compressed·	𖽢
+  gIanYcmp = postscript("miao_ian.ycmp");  // U+16F63 compressed·	𖽣
+  gIangYcmp = postscript("miao_iang.ycmp");  // U+16F64 compressed·	𖽤
+  gIoYcmp = postscript("miao_io.ycmp");  // U+16F65 compressed·	𖽥
+  gIeYcmp = postscript("miao_ie.ycmp");  // U+16F66 compressed·	𖽦
+  gIiYcmp = postscript("miao_ii.ycmp");  // U+16F67 compressed·	𖽧
+  gIuYcmp = postscript("miao_iu.ycmp");  // U+16F68 compressed·	𖽨
+  gIngYcmp = postscript("miao_ing.ycmp");  // U+16F69 compressed·	𖽩
+  gUYcmp = postscript("miao_u.ycmp");  // U+16F6A compressed·	𖽪
+  gUaYcmp = postscript("miao_ua.ycmp");  // U+16F6B compressed·	𖽫
+  gUanYcmp = postscript("miao_uan.ycmp");  // U+16F6C compressed·	𖽬
+  gUangYcmp = postscript("miao_uang.ycmp");  // U+16F6D compressed·	𖽭
+  gUuYcmp = postscript("miao_uu.ycmp");  // U+16F6E compressed·	𖽮
+  gUeiYcmp = postscript("miao_uei.ycmp");  // U+16F6F compressed·	𖽯
+  gUngYcmp = postscript("miao_ung.ycmp");  // U+16F70 compressed·	𖽰
+  gYYcmp = postscript("miao_y.ycmp");  // U+16F71 compressed·	𖽱
+  gYiYcmp = postscript("miao_yi.ycmp");  // U+16F72 compressed·	𖽲
+  gAeYcmp = postscript("miao_ae.ycmp");  // U+16F73 compressed·	𖽳
+  gAeeYcmp = postscript("miao_aee.ycmp");  // U+16F74 compressed·	𖽴
+  gErrYcmp = postscript("miao_err.ycmp");  // U+16F75 compressed·	𖽵
+  gErrRndYcmp = postscript("miao_round_err.ycmp");  // U+16F76 compressed·	𖽶
+  gErYcmp = postscript("miao_er.ycmp");  // U+16F77 compressed·	𖽷
+  gErRndYcmp = postscript("miao_round_er.ycmp");  // U+16F78 compressed·	𖽸
+  gAiYcmp = postscript("miao_ai.ycmp");  // U+16F79 compressed·	𖽹
+  gEiYcmp = postscript("miao_ei.ycmp");  // U+16F7A compressed·	𖽺
+  gAuYcmp = postscript("miao_au.ycmp");  // U+16F7B compressed·	𖽻
+  gOuYcmp = postscript("miao_ou.ycmp");  // U+16F7C compressed·	𖽼
+  gNYcmp = postscript("miao_n.ycmp");  // U+16F7D compressed·	𖽽
+  gNgYcmp = postscript("miao_ng.ycmp");  // U+16F7E compressed·	𖽾
+
+  clsFina = (gA, gAa, gAhh, gAn, gAng,
+             gO, gOo, gWo, gW,
+             gE, gEn, gEng, gOey,
+             gI, gIa, gIan, gIang, gIo,
+             gIe, gIi, gIu, gIng,
+             gU, gUa, gUan, gUang,
+             gUu, gUei, gUng,
+             gY, gYi, gAe, gAee,
+             gErr, gErrRnd, gEr, gErRnd,
+             gAi, gEi, gAu, gOu,
+             gN, gNg);
+
+  clsFinaYcmp = (gAYcmp, gAaYcmp, gAhhYcmp, gAnYcmp, gAngYcmp,
+                 gOYcmp, gOoYcmp, gWoYcmp, gWYcmp,
+                 gEYcmp, gEnYcmp, gEngYcmp, gOeyYcmp,
+                 gIYcmp, gIaYcmp, gIanYcmp, gIangYcmp, gIoYcmp,
+                 gIeYcmp, gIiYcmp, gIuYcmp, gIngYcmp,
+                 gUYcmp, gUaYcmp, gUanYcmp, gUangYcmp,
+                 gUuYcmp, gUeiYcmp, gUngYcmp,
+                 gYYcmp, gYiYcmp, gAeYcmp, gAeeYcmp,
+                 gErrYcmp, gErrRndYcmp, gErYcmp, gErRndYcmp,
+                 gAiYcmp, gEiYcmp, gAuYcmp, gOuYcmp,
+                 gNYcmp, gNgYcmp);
+
+/* necessary for correct shifting height to have a class excluding "a" (U+16F54) but clsFina can't be composed of gA and clsFinaStdYShift as it needs to correspond exactly to clsFinaYcmp */
+  clsFinaStdYShift = (gAa, gAhh, gAn, gAng,
+             gO, gOo, gWo, gW,
+             gE, gEn, gEng, gOey,
+             gI, gIa, gIan, gIang, gIo,
+             gIe, gIi, gIu, gIng,
+             gU, gUa, gUan, gUang,
+             gUu, gUei, gUng,
+             gY, gYi, gAe, gAee,
+             gErr, gErrRnd, gEr, gErRnd,
+             gAi, gEi, gAu, gOu,
+             gN, gNg);
+
+/* y-compressed finals break-down: "norm" height 200m or 230m, bottom join; "top" height 230m, top join; "desc" height 278m, top join */
+  clsFinaYcmpNorm = (gAYcmp, gAaYcmp, gAhhYcmp, gAnYcmp, gAngYcmp,
+                     gOYcmp, gOoYcmp, gWoYcmp, gWYcmp,
+                     gEYcmp, gEnYcmp, gEngYcmp, gOeyYcmp,
+                     gIYcmp, gIaYcmp,/*gIanYcmp, gIangYcmp,*/gIoYcmp,
+                     gIeYcmp, gIiYcmp,/*gIuYcmp, gIngYcmp,*/
+                     gUYcmp, gUaYcmp, gUanYcmp, gUangYcmp,
+                     gUuYcmp, gUeiYcmp, gUngYcmp,
+                     gYYcmp, gYiYcmp, gAeYcmp, gAeeYcmp,
+                     gErrYcmp, gErrRndYcmp, gErYcmp, gErRndYcmp,
+                     gAiYcmp, gEiYcmp, gAuYcmp, gOuYcmp,
+                     gNYcmp, gNgYcmp)
     { NormM = point(bb.width/2, bb.bottom) ;
       NormL = point(bb.right+30m, bb.bottom) ;
       NormR = point(bb.left-30m, bb.bottom) ;
       NormTopL = point(bb.right+30m, bb.top) ;
       NormTopR = point(bb.left-30m, bb.top) } ;
 
-  clsFinaYcmpTop = (U+EC68, U+EC69)
+  clsFinaYcmpTop = (gIuYcmp, gIngYcmp)
     { TopM = point(bb.width/2, bb.top) ;
       TopL = point(bb.right+30m, bb.top) ;
       TopR = point(bb.left-30m, bb.top) } ;
 
-  clsFinaYcmpDesc = (U+EC63, U+EC64)
+  clsFinaYcmpDesc = (gIanYcmp, gIangYcmp)
     { DescM = point(bb.width/2, bb.top) ;
-      DescL = point(bb.right-40m, bb.top) ;
-      DescR = point(bb.left-30m, bb.top) } ;
+      DescL = point(bb.right-10m, bb.top) ;
+      DescR = point(bb.left-10m, bb.top) } ;
 
-  clsFinaYcmp = (U+EC54..U+EC7E);
+/* tone positions */
+  gRightMark = postscript("miao_tone_right");  // U+16F8F·	𖾏
+  gTopRightMark = postscript("miao_tone_top_right");  // U+16F90·	𖾐
+  gAboveMark = postscript("miao_tone_above");  // U+16F91·	𖾑
+  gBelowMark = postscript("miao_tone_below");  // U+16F92·	𖾒
 
-  clsTone = (U+16F93..U+16F9F);
-  clsAsp = (gAsp, gVoiRef, gAspRef);
-  clsAspHi = (gAsp, gVoiRef)
-    { AspHiM = point(bb.left, bb.top) } ;
-  clsAspLo = (gAspRef)
-    { AspLoM = point(bb.left, bb.bottom) } ;
-  
+  gRight = postscript("miao_tone_right.blnk");  // U+16F8F blank·	𖾏
+  gTopRight = postscript("miao_tone_top_right.blnk");  // U+16F90 blank·	𖾐
+  gAbove = postscript("miao_tone_above.blnk");  // U+16F91 blank·	𖾑
+  gBelow = postscript("miao_tone_below.blnk");  // U+16F92 blank·	𖾒
+
   clsPosMark = (gRightMark, gTopRightMark, gAboveMark, gBelowMark);
-  gRight     = U+EC8F;
-  gTopRight  = U+EC90;
-  gAbove     = U+EC91;
-  gBelow     = U+EC92;
   clsPos     = (gRight, gTopRight, gAbove, gBelow);
 
-/* here just in case */
+/* tone letters */
+/* Chuxiong Orthography*/
+  gTone2 = postscript("miao_tone2");  // U+16F93·𖾓
+  gTone3 = postscript("miao_tone3");  // U+16F94·𖾔
+  gTone4 = postscript("miao_tone4");  // U+16F95·𖾕
+  gTone5 = postscript("miao_tone5");  // U+16F96·𖾖
+  gTone6 = postscript("miao_tone6");  // U+16F97·𖾗
+  gTone7 = postscript("miao_tone7");  // U+16F98·𖾘
+  gTone8 = postscript("miao_tone8");  // U+16F99·𖾙
+/* Post-1949 Reform */
+  gTone1Ref = postscript("miao_ref_tone1");  // U+16F9A·𖾚
+  gTone2Ref = postscript("miao_ref_tone2");  // U+16F9B·𖾛
+  gTone4Ref = postscript("miao_ref_tone4");  // U+16F9C·𖾜
+  gTone5Ref = postscript("miao_ref_tone5");  // U+16F9D·𖾝
+  gTone6Ref = postscript("miao_ref_tone6");  // U+16F9E·𖾞
+  gTone8Ref = postscript("miao_ref_tone8");  // U+16F9F·𖾟
+
+  clsTone = (gTone2, gTone3, gTone4, gTone5,
+             gTone6, gTone7, gTone8,
+             gTone1Ref, gTone2Ref, gTone4Ref,
+             gTone5Ref, gTone6Ref, gTone8Ref);
+
+/* shared punctuation here just in case */
   gSpace = U+0020;
   clsPnct = (gSpace, (U+0021..U+002F), (U+003A..U+003F));
 
@@ -340,8 +535,18 @@ table(glyph) {AttributeOverride = true};
   clsSCPnct = postscript("ampersand.sc", "hyphen.sc", "endash.sc","emdash.sc");
 endtable;
 
-/* features for Latin; this table is irrelevant for Miao*/
 table(feature)
+/* Chuxiong 'wart' variant */
+  chux {
+    id = "chux";
+    name.LG_USENG = string("Chuxiong");
+  }
+/* misc stylistic alternates */
+  salt {
+    id = "salt";
+    name.LG_USENG = string("Stylistic alternates");
+  }
+/* features for Latin; irrelevant for Miao*/
   smcp {
     id = "smcp";
     name.LG_USENG = string("Small caps");
@@ -361,6 +566,14 @@ table(sub)
   _ clsInit clsAsp gNasal > gNasal:4 @2 @3 _ ; // reorder nasalization marker to come before syllable initial if there is an intervening aspiration mark (technically a typing error but rule included just in case)
   clsPosMark > clsPos / clsFina _ ; // turn position marker into its corresponding zero-width blank glyph when after a final
 
+/* features for Miao */
+  if (salt)
+    clsInitSaltStd > clsInitSalt ;
+  endif;
+  if (chux)
+    clsWartStd > clsWartChux ;
+  endif;
+
 /* features for Latin, irrelevant for Miao */
   if (smcp)
     clsLower > clsSC ;
@@ -377,22 +590,20 @@ table(sub)
  endpass;
 
  pass(2)
-  clsInit gNasal > @2 @1 ; // reorder nasalization marker to come before syllable initial (for correct typing order, should ignore output of the corresponding "typo" rule in pass(1))
-  clsFina > clsFinaYcmp / _ clsFina? clsFina? gAbove ; // turn final into corresponding y-axis compressed glyph when about to be positioned above initial
-  clsFina > clsFinaYcmp / _ clsFina? clsFina? gBelow ; // turn final into corresponding y-axis compressed glyph when about to be positioned below initial
+  clsInit gNasal > @2 @1 ; // reorder nasalization marker to come before syllable initial (for correct typing order; ignores output of the corresponding "typo" rule in pass(1))
+  clsFina > clsFinaYcmp / _ [clsFina? clsFina]? gAbove ; // turn final into corresponding y-axis compressed glyph when about to be positioned above initial
+  clsFina > clsFinaYcmp / _ [clsFina? clsFina]? gBelow ; // turn final into corresponding y-axis compressed glyph when about to be positioned below initial
  endpass;
 endtable;
 
 table(pos) { MUnits = 1000 }
  pass(1)
-/* attach aspiration mark to initial; shouldn't require context section as nasal marker is reordered before this */
-  clsInitHiMajKern clsAspHi {attach {to=@1; at=AspHiMajS; with=AspHiM; level = 1}} ;
-  clsInitHiMinKern clsAspHi {attach {to=@1; at=AspHiMinS; with=AspHiM; level = 1}} ;
-  clsInitHiNoKern  clsAspHi {attach {to=@1; at=AspHiS; with=AspHiM; level = 1}} ;
-  clsInitLoMajKern clsAspLo {attach {to=@1; at=AspLoMajS; with=AspLoM; level = 1}} ;
-  clsInitLoMinKern clsAspLo {attach {to=@1; at=AspLoMinS; with=AspLoM; level = 1}} ;
-  clsInitLoNoKern  clsAspLo {attach {to=@1; at=AspLoS; with=AspLoM; level = 1}} ;
- endpass; // pass1
+/* attach aspiration mark to initial; doesn't require context section as nasal marker is reordered before this */
+  clsInit clsAspHi {attach {to=@1; at=aspHiS; with=aspHiM; 
+    level = 1}} ;
+  clsInit clsAspLo {attach {to=@1; at=aspLoS; with=aspLoM; 
+    level = 1}} ;
+ endpass; // pass1 — aspiration/voicing marks
 
  pass(2)
 /* only operates if there are two finals together moving TONE ABOVE position */
@@ -504,55 +715,57 @@ table(pos) { MUnits = 1000 }
   clsInit clsFinaYcmpDesc {attach {to=@1; at=belowDescS; with=DescM; level = 2}}
     /  _ clsAsp? _ gBelow ;
 
-/* kern baseline finals (with respect to Lo initial kerning class) */
-  clsFina {kern.x =  -40m} / clsInitLoMinKern _ ;
-  clsFina {kern.x = -140m} / clsInitLoMajKern _ ;
-  clsFina {kern.x = -160m} / clsInitLoNoKern  clsAspHi _ ;
+/* kern right finals (without aspiration mark) */
+  clsFina {kern.x =    0m} / clsInitMidNoKern  _ OPT_FINA_SEQ gRight;
+  clsFina {kern.x =  -80m} / clsInitMidMinKern _ OPT_FINA_SEQ gRight;
+  clsFina {kern.x = -130m} / clsInitMidMajKern _ OPT_FINA_SEQ gRight;
+  clsFina {kern.x =  -40m} / clsAsp _ OPT_FINA_SEQ gRight;
+
+/* kern topright finals with respect to Lo initial kerning class for combinations like V,° (values inverted) */
+  clsFina {kern.x = -90m} / clsInitLoMinKern  clsAspLo _ OPT_FINA_SEQ gTopRight;
+  clsFina {kern.x = -60m} / clsInitLoMajKern  clsAspLo _ OPT_FINA_SEQ gTopRight;
+  clsFina {kern.x =  40m} / clsInitLoChuxKern clsAspLo _ OPT_FINA_SEQ gTopRight;
+
+/* kern topright finals with respect to Hi initial kerning class */
+  clsFina {kern.x =    0m} / clsInitHiNoKern  _ OPT_FINA_SEQ gTopRight;
+  clsFina {kern.x =  -90m} / clsInitHiMinKern _ OPT_FINA_SEQ gTopRight;
+  clsFina {kern.x = -160m} / clsInitHiMajKern _ OPT_FINA_SEQ gTopRight;
+  clsFina {kern.x =   10m} / clsAspHi _ OPT_FINA_SEQ gTopRight;
+  clsFina {kern.x = -190m} / clsInitHiNoKern  clsAspLo _ OPT_FINA_SEQ gTopRight;
+  clsFina {kern.x = -240m} / clsInitHiMinKern clsAspLo _ OPT_FINA_SEQ gTopRight;
+  clsFina {kern.x = -340m} / clsInitHiMajKern clsAspLo _ OPT_FINA_SEQ gTopRight;
+
+/* kern baseline finals with respect to Hi initial kerning class for combinations like A'o (values inverted) */
+  clsFina {kern.x =  -90m} / clsInitHiMinKern clsAspHi _ ;
+  clsFina {kern.x =  -20m} / clsInitHiMajKern clsAspHi _ ;
+
+/* kern baseline finals with respect to Lo initial kerning class */
+  clsFina {kern.x =  -60m} / clsInitLoMinKern _ ;
+  clsFina {kern.x = -160m} / clsInitLoMajKern _ ;
+  clsFina {kern.x = -320m} / clsInitLoChuxKern _ ;
+  clsFina {kern.x = -190m} / clsInitLoNoKern  clsAspHi _ ;
   clsFina {kern.x = -220m} / clsInitLoMinKern clsAspHi _ ;
   clsFina {kern.x = -300m} / clsInitLoMajKern clsAspHi _ ;
+  clsFina {kern.x = -480m} / clsInitLoChuxKern clsAspHi _ ;
  endpass; //pass2 
 
  pass(3)
-/* kern baseline finals (with respect to Hi initial kerning class for combinations like A'o) */
-  clsFina {kern.x =  -40m} / clsInitHiMinKern clsAspHi _ ;
-  clsFina {kern.x =  -10m} / clsInitHiMajKern clsAspHi _ ;
- endpass; // pass3
-
- pass(4)
-/* kern right finals  */
-  clsFina {kern.x =    0m} / clsInitMidNoKern  _ clsFina? clsFina? clsFina? clsFina? clsFina? gRight;
-  clsFina {kern.x =  -80m} / clsInitMidMinKern _ clsFina? clsFina? clsFina? clsFina? clsFina? gRight;
-  clsFina {kern.x = -160m} / clsInitMidMajKern _ clsFina? clsFina? clsFina? clsFina? clsFina? gRight;
-  clsFina {kern.x =  -40m} / clsAsp _ clsFina? clsFina? clsFina? clsFina? clsFina? gRight;
-
-/* kern topright finals with respect to Hi initial kerning class */
-  clsFina {kern.x =    0m} / clsInitHiNoKern  _ clsFina? clsFina? clsFina? clsFina? clsFina? gTopRight;
-  clsFina {kern.x =  -90m} / clsInitHiMinKern _ clsFina? clsFina? clsFina? clsFina? clsFina? gTopRight;
-  clsFina {kern.x = -160m} / clsInitHiMajKern _ clsFina? clsFina? clsFina? clsFina? clsFina? gTopRight;
-  clsFina {kern.x =   10m} / clsAspHi _ clsFina? clsFina? clsFina? clsFina? clsFina? gTopRight;
-
-  clsFina {kern.x = -160m} / clsInitHiNoKern  clsAspLo _ clsFina? clsFina? clsFina? clsFina? clsFina? gTopRight;
-  clsFina {kern.x = -200m} / clsInitHiMinKern clsAspLo _ clsFina? clsFina? clsFina? clsFina? clsFina? gTopRight;
-  clsFina {kern.x = -300m} / clsInitHiMajKern clsAspLo _ clsFina? clsFina? clsFina? clsFina? clsFina? gTopRight;
- endpass; // pass4
-
- pass(5)
-/* kern topright finals with respect to Lo initial kerning class for combinations like V,o^ */
-  clsFina {kern.x =  -90m} / clsInitLoMinKern clsAspLo _ clsFina? clsFina? clsFina? clsFina? clsFina? gTopRight;
-  clsFina {kern.x =  -20m} / clsInitLoMajKern clsAspLo _ clsFina? clsFina? clsFina? clsFina? clsFina? gTopRight;
- endpass; // pass5
-
- pass(6)
 /* shift final(s) up to "tone right" position (219m, 1/3 of cap height) */
-  clsFina {shift.y = 219m} / _ clsFina? clsFina? clsFina? clsFina? clsFina? gRight ;
-
+  clsFinaStdYShift {shift.y = 219m} / _ OPT_FINA_SEQ gRight ;
 /* shift final(s) up to "tone top right" position (438m, 2/3 of cap height) */
-  clsFina {shift.y = 438m} / _ clsFina? clsFina? clsFina? clsFina? clsFina? gTopRight ;
- endpass; // pass6
+  clsFinaStdYShift {shift.y = 438m} / _ OPT_FINA_SEQ gTopRight ;
+/* shift the "a" final up an extra notch for right and topright */
+  gA {shift.y = 219m+80m}  / _ OPT_FINA_SEQ gRight ;
+  gA {shift.y = 438m+160m} / _ OPT_FINA_SEQ gTopRight ;
+ endpass; // pass3
+endtable; // positioning table
 
- pass(7)
-/* shift the "a" vowel up an extra notch for right and topright */
-  gA {shift.y = 219m+80m} / _ clsFina? clsFina? clsFina? clsFina? clsFina? gRight ;
-  gA {shift.y = 438m+160m} / _ clsFina? clsFina? clsFina? clsFina? clsFina? gTopRight ;
- endpass; // pass7
-endtable;
+
+
+
+
+
+
+
+
+
