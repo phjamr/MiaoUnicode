@@ -1,0 +1,64 @@
+// based on a keyboard map from an 'xkb/symbols/' file
+
+partial default alphanumeric_keys
+xkb_symbols "miao" {
+    name[Group1]="Miao";
+
+// Alphanumeric section
+
+// alt gr for Chuxiong tone letters, alt gr + shift for obsolete reform tone letters
+key <TLDE> { [ 0x1016F79,  0x1016F7A,  0x1016F7B,  0x1016F7C ] };
+key <AE01> { [        1,      exclam, VoidSymbol,  0x1016F9A ] };
+key <AE02> { [        2,          at,  0x1016F93,  0x1016F9B ] };
+key <AE03> { [        3,  numbersign,  0x1016F94, VoidSymbol ] };
+key <AE04> { [        4,      dollar,  0x1016F95,  0x1016F9C ] };
+key <AE05> { [        5,     percent,  0x1016F96,  0x1016F9D ] };
+key <AE06> { [        6, asciicircum,  0x1016F97,  0x1016F9E ] };
+key <AE07> { [        7,   ampersand,  0x1016F98, VoidSymbol ] };
+key <AE08> { [        8,    asterisk,  0x1016F99,  0x1016F9F ] };
+key <AE09> { [        9,   parenleft,  0x1016F52,  0x1016F53 ] };
+key <AE10> { [        0,  parenright, VoidSymbol, VoidSymbol ] };
+key <AE11> { [ 0x1016F75,  0x1016F76,      minus, underscore ] };
+key <AE12> { [ 0x1016F77,  0x1016F78,      equal,       plus ] };
+
+key <AD01> { [ 0x1016F21,  0x1016F22,  0x1016F23,  0x1016F24 ] };
+key <AD02> { [ 0x1016F6B,  0x1016F6F,  0x1016F6C,  0x1016F6D ] };
+key <AD03> { [ 0x1016F5D,  0x1016F5E,  0x1016F5F,  0x1016F60 ] };
+key <AD04> { [ 0x1016F3B,  0x1016F3C,  0x1016F35,  0x1016F36 ] };
+key <AD05> { [ 0x1016F0A,  0x1016F0E,  0x1016F0D,  0x1016F0C ] };
+key <AD06> { [ 0x1016F43,  0x1016F44,  0x1016F71,  0x1016F72 ] };
+key <AD07> { [ 0x1016F6A,  0x1016F6E, VoidSymbol,  0x1016F70 ] };
+key <AD08> { [ 0x1016F61,  0x1016F67,  0x1016F66,  0x1016F69 ] };
+key <AD09> { [ 0x1016F59,  0x1016F5A,  0x1016F5B,  0x1016F5C ] };
+key <AD10> { [ 0x1016F00,  0x1016F03,  0x1016F02, VoidSymbol ] };
+key <AD11> { [ 0x1016F91,  0x1016F92,  0x1016F68,  bracketleft ] };
+key <AD12> { [ 0x1016F74,  0x1016F75, VoidSymbol, bracketright ] };
+
+key <AC01> { [ 0x1016F54,  0x1016F55,  0x1016F57,  0x1016F58 ] };
+key <AC02> { [ 0x1016F3A,  0x1016F37,  0x1016F39,  0x1016F38 ] };
+key <AC03> { [ 0x1016F0B,  0x1016F0F, VoidSymbol,  0x1016F3F ] };
+key <AC04> { [ 0x1016F07,  0x1016F42,  0x1016F2D,  0x1016F2E ] };
+key <AC05> { [ 0x1016F1F, VoidSymbol,  0x1016F28,  0x1016F29 ] };
+key <AC06> { [ 0x1016F26,  0x1016F27, VoidSymbol, VoidSymbol ] };
+key <AC07> { [ 0x1016F33,  0x1016F34,  0x1016F30,  0x1016F31 ] };
+key <AC08> { [ 0x1016F1E, VoidSymbol,  0x1016F20,  0x1016F32 ] };
+key <AC09> { [ 0x1016F16,  0x1016F17,  0x1016F18,  0x1016F19 ] };
+key <AC10> { [ 0x1016F8F, VoidSymbol,  semicolon,      colon ] };
+key <AC11> { [ 0x1016F90,  0x1016F56, apostrophe,   quotedbl ] };
+
+key <AB01> { [ 0x1016F3D,  0x1016F3E,  0x1016F40,  0x1016F41 ] };
+key <AB02> { [ 0x1016F1A,  0x1016F1B,  0x1016F1C,  0x1016F1D ] };
+key <AB03> { [ 0x1016F2A,  0x1016F2B,  0x1016F2C,  0x1016F2F ] };
+key <AB04> { [ 0x1016F08,  0x1016F09, VoidSymbol, VoidSymbol ] };
+key <AB05> { [ 0x1016F01, VoidSymbol,  0x1016F13,  0x1016F25 ] };
+key <AB06> { [ 0x1016F10,  0x1016F11,  0x1016F14,  0x1016F15 ] };
+key <AB07> { [ 0x1016F04,  0x1016F05,  0x1016F12,  0x1016F06 ] };
+key <AB08> { [     comma,       less,  0x1016F62,  0x1016F65 ] };
+key <AB09> { [    period,    greater,  0x1016F63,  0x1016F64 ] };
+key <AB10> { [     slash,   question,  0x1016F7D,  0x1016F7E ] };
+    
+key <BKSL> { [ 0x1016F50,  0x1016F51, backslash, bar ] };
+
+// End alphanumeric section
+include "level3(ralt_switch)"
+};
