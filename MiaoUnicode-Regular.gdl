@@ -155,7 +155,88 @@ gZzya, gZzsya, gWa, gAh, gHha
                  gTshaYiChux, gZshaChux, gDzaChux, gZsaChux,
                  gZzsaChux, gZzsyaChux, gHhaChux);
 
-  clsInit = (clsInitStd, clsInitSalt, clsWartChux);
+/* digraphs of initials with aspiration mark on the left (ma and na based letters) */
+/* simpler than using attachment points in order to guard left space, so that asp mark doesn't hang too far over */
+  gMaAspL = postscript("miao_ma.aspl");  // U+16F04·𖼄
+  gMhaAspL = postscript("miao_mha.aspl");  // U+16F05·𖼅
+  gMaArchAspL = postscript("miao_arch_ma.aspl")  // U+16F06·𖼆
+    { aboveNormS = point(bb.width/2+10m, bb.top+90m-44m) ;
+      aboveTopS  = point(bb.width/2+10m, bb.top+320m-44m) ;
+      aboveDescS = point(bb.width/2+10m, bb.top+340m-44m) ;
+      belowNormS = point(bb.width/2+10m, bb.bottom-320m) ;
+      belowTopS  = point(bb.width/2+10m, bb.bottom-90m) ;
+      belowDescS = point(bb.width/2+10m, bb.bottom-70m) } ;
+  gNaAspL = postscript("miao_na.aspl");  // U+16F10·𖼐
+  gNhaAspL = postscript("miao_nha.aspl");  // U+16F11·𖼑
+  gNnaYiAspL = postscript("miao_yi_nna.aspl");  // U+16F12·𖼒
+  gNaArchAspL = postscript("miao_arch_na.aspl")  // U+16F13·𖼓
+    { aboveNormS = point(bb.width/2+50m, bb.top+90m-44m) ;
+      aboveTopS  = point(bb.width/2+50m, bb.top+320m-44m) ;
+      aboveDescS = point(bb.width/2+50m, bb.top+340m-44m) ;
+      belowNormS = point(bb.width/2+50m, bb.bottom-320m) ;
+      belowTopS  = point(bb.width/2+50m, bb.bottom-90m) ;
+      belowDescS = point(bb.width/2+50m, bb.bottom-70m) } ;
+  gNnaAspL = postscript("miao_nna.aspl");  // U+16F14·𖼔
+  gNnhaAspL = postscript("miao_nnha.aspl");  // U+16F15·𖼕
+  gNgaAspL = postscript("miao_nga.aspl");  // U+16F23·𖼣
+  gNghaAspL = postscript("miao_ngha.aspl");  // U+16F24·𖼤
+  gNgaArchAspL = postscript("miao_arch_nga.aspl")  // U+16F25·𖼥
+    { aboveNormS = point(bb.width/2+60m, bb.top+90m-44m) ;
+      aboveTopS  = point(bb.width/2+60m, bb.top+320m-44m) ;
+      aboveDescS = point(bb.width/2+60m, bb.top+340m-44m) ;
+      belowNormS = point(bb.width/2+60m, bb.bottom-320m) ;
+      belowTopS  = point(bb.width/2+60m, bb.bottom-90m) ;
+      belowDescS = point(bb.width/2+60m, bb.bottom-70m) } ;
+  gMhaChuxAspL = postscript("miao_mha.chux.aspl");  // U+16F05 Chuxiong·𖼅
+  gNhaChuxAspL = postscript("miao_nha.chux.aspl");  // U+16F11 Chuxiong·𖼑
+  gNnhaChuxAspL = postscript("miao_nnha.chux.aspl");  // U+16F15 Chuxiong·𖼕
+  gNghaChuxAspL = postscript("miao_ngha.chux.aspl");  // U+16F24 Chuxiong·𖼤
+
+  clsInitAspL = (gMaAspL, gMhaAspL, gMaArchAspL,
+                 gNaAspL, gNhaAspL, gNnaYiAspL,
+                 gNaArchAspL, gNnaAspL, gNnhaAspL,
+                 gNgaAspL, gNghaAspL, gNgaArchAspL,
+                 gMhaChuxAspL,
+                 gNhaChuxAspL, gNnhaChuxAspL,
+                 gNghaChuxAspL);
+
+  clsInitAspLStd = (gMa, gMha, gMaArch,
+                    gNa, gNha, gNnaYi,
+                    gNaArch, gNna, gNnha,
+                    gNga, gNgha, gNgaArch,
+                    gMhaChux,
+                    gNhaChux, gNnhaChux,
+                    gNghaChux);
+
+  clsInit = (clsInitStd, clsInitSalt, clsWartChux, clsInitAspL);
+
+/* initials with aspiration mark on the right (default) */
+  clsInitAspR = (
+gPa, gBa, gPaYi, gPla,
+gFa, gVa, gVfa,
+gTa, gDa, gTtaYi,
+gTaYi, gTta, gDda,
+gLa, gLya, gLha, gLhya,
+gTlha, gDlha, gTlhya, gDlhya,
+gKa, gGa, gKaYi, gQa, gQga,
+gHa, gXa, gGha, gGhha,
+gTssa, gDzza, gNya,
+gNyha, gTsha,
+gDzha, gTshaYi, gDzhaYi, gTshaRef,
+gSha, gSsa, gZha, gZsha,
+gTsa, gDza, gTsaYi,
+gSa, gZa, gZsa,
+gZza, gZzsa, gZzaArch,
+gZzya, gZzsya, gWa, gAh, gHha,
+gShaSalt, gSsaSalt,
+gBaChux,   gVfaChux,
+gDaChux, gDdaChux,
+gLyaChux, gLhyaChux, gDlhaChux, gDlhyaChux,
+gGaChux, gQgaChux,
+gGhhaChux, gDzzaChux, gTshaChux,
+gTshaYiChux, gZshaChux, gDzaChux, gZsaChux,
+gZzsaChux, gZzsyaChux, gHhaChux
+  );
 
 /* high kerning for A shape letters */
   clsInitHiMajKern = (gLa, gLya, gLha, gLhya,
@@ -163,10 +244,11 @@ gZzya, gZzsya, gWa, gAh, gHha
                       gTssa, gDzza, gZza, gZzsa, gZzaArch,
                       gZzya, gZzsya)
     { aspHiS = point(bb.right-60m, bb.bottom+700m) } ;
-  clsInitHiMinKern = (gPaYi, gMaArch)
+  clsInitHiMinKern = (gPaYi, gMaArch, gMaArchAspL)
     { aspHiS = point(bb.right-10m, bb.bottom+700m) } ;
   clsInitHiNoKern = (gPa, gBa, gPla, gMa, gMha, gFa,
-                     gVa, gVfa, gTa, gDa, gTtaYi, gTaYi, gTta, gDda,
+                     gVa, gVfa, gTa, gDa,
+                     gTtaYi, gTaYi, gTta, gDda,
                      gNa, gNha, gNnaYi, gNaArch, gNna, gNnha,
                      gKa, gGa, gKaYi, gQa, gQga, gNga, gNgha,
                      gNgaArch, gHa, gXa, gGha, gGhha,
@@ -174,7 +256,15 @@ gZzya, gZzsya, gWa, gAh, gHha
                      gTshaRef, gSha, gSsa, gZha, gZsha,
                      gTsa, gDza, gTsaYi, gSa, gZa, gZsa,
                      gWa, gAh, gHha,
-                     clsWartChux, clsInitSalt)
+                     clsWartChux, clsInitSalt
+                     gMaAspL, gMhaAspL,
+                     gNaAspL, gNhaAspL
+                     gNaAspL, gNhaAspL, gNnaYiAspL,
+                     gNaArchAspL, gNnaAspL, gNnhaAspL,
+                     gNgaAspL, gNghaAspL, gNgaArchAspL,
+                     gMhaChuxAspL,
+                     gNhaChuxAspL, gNnhaChuxAspL,
+                     gNghaChuxAspL)
     { aspHiS = point(bb.right+90m, bb.bottom+700m) } ;
 
 /* mid kerning for C shape letters */
@@ -188,7 +278,11 @@ gZzya, gZzsya, gWa, gAh, gHha
                        gGaChux, gQgaChux, gNghaChux,
                        gGhhaChux, gDzzaChux, gTshaChux,
                        gTshaYiChux, gZshaChux,   gZsaChux,
-                       gHhaChux);
+                       gHhaChux,
+                       gNaAspL, gNhaAspL, gNnaYiAspL,
+                       gMhaChuxAspL,
+                       gNhaChuxAspL, gNnhaChuxAspL,
+                       gNghaChuxAspL);
   clsInitMidMinKern = (gPaYi, gVa, gVfa
                        gTlha, gDlha, gTlhya, gDlhya,
                        gKaYi, gNyha, gTsha,
@@ -203,7 +297,10 @@ gZzya, gZzsya, gWa, gAh, gHha
                        gSha, gSsa, gZha, gZsha,
                        gTsa, gDza, gTsaYi,
                        gSa, gZa, gZsa, gZzaArch, gWa
-                       clsInitSalt, gLhyaChux, gDzaChux);
+                       clsInitSalt, gLhyaChux, gDzaChux
+                       gMaAspL, gMhaAspL, gMaArchAspL,
+                       gNaArchAspL, gNnaAspL, gNnhaAspL,
+                       gNgaAspL, gNghaAspL, gNgaArchAspL);
 
 /* low kerning for V shape letters */
   clsInitLoChuxKern = (gVfaChux, gDaChux, gQgaChux,
@@ -216,12 +313,14 @@ gZzya, gZzsya, gWa, gAh, gHha
                       gBaChux, gDdaChux,
                       gNhaChux, gNnhaChux, gGaChux, gNghaChux,
                       gGhhaChux, gTshaChux, gTshaYiChux,
-                      gDzaChux, gZshaChux, gZsaChux)
+                      gDzaChux, gZshaChux, gZsaChux
+                      gNhaChuxAspL, gNnhaChuxAspL,
+                      gNghaChuxAspL)
     { aspLoS = point(bb.right-50m, bb.bottom-50m) } ;
   clsInitLoMinKern = (gTaYi, gKaYi,
                       gTsa, gDza, gTsaYi,
                       gSha, gSsa,
-                      gMhaChux)
+                      gMhaChux, gMhaChuxAspL)
     { aspLoS = point(bb.right+10m, bb.bottom-50m) } ;
   clsInitLoNoKern = (gPa, gBa, gPaYi, gPla, gMa, gMha, gMaArch,
                      gTta, gDda,
@@ -237,7 +336,11 @@ gZzya, gZzsya, gWa, gAh, gHha
                      gZza, gZzsa, gZzaArch, gZzya, gZzsya, gWa,
                      clsInitSalt,
                      gLyaChux, gLhyaChux, gDlhaChux, gDlhyaChux,
-                     gDzzaChux, gZzsaChux, gZzsyaChux)
+                     gDzzaChux, gZzsaChux, gZzsyaChux
+                     gMaAspL, gMhaAspL, gMaArchAspL,
+                     gNaAspL, gNhaAspL, gNnaYiAspL,
+                     gNaArchAspL, gNnaAspL, gNnhaAspL,
+                     gNgaAspL, gNghaAspL, gNgaArchAspL)
     { aspLoS = point(bb.right+90m, bb.bottom-50m) } ;
 
 /* S(tationary) attachment points for above and below position */
@@ -316,6 +419,40 @@ gZzya, gZzsya, gWa, gAh, gHha
       belowTopS  = point(bb.width/2+30m, bb.bottom-90m) ;
       belowDescS = point(bb.width/2+30m, bb.bottom-70m) } ;
 
+  clsInitAlignAspL1 = (gMaAspL, gMhaAspL) // merge with R3?
+    { aboveNormS = point(bb.width/2+50m, bb.top+90m-44m) ;
+      aboveTopS  = point(bb.width/2+50m, bb.top+320m-44m) ;
+      aboveDescS = point(bb.width/2+50m, bb.top+340m-44m) ;
+      belowNormS = point(bb.width/2+50m, bb.bottom-320m) ;
+      belowTopS  = point(bb.width/2+50m, bb.bottom-90m) ;
+      belowDescS = point(bb.width/2+50m, bb.bottom-70m) } ;
+
+  clsInitAlignAspL2 = (gNaAspL, gNnaAspL, gNgaAspL)
+    { aboveNormS = point(bb.width/2+80m, bb.top+90m-44m) ;
+      aboveTopS  = point(bb.width/2+80m, bb.top+320m-44m) ;
+      aboveDescS = point(bb.width/2+80m, bb.top+340m-44m) ;
+      belowNormS = point(bb.width/2+80m, bb.bottom-320m) ;
+      belowTopS  = point(bb.width/2+80m, bb.bottom-90m) ;
+      belowDescS = point(bb.width/2+80m, bb.bottom-70m) } ;
+
+  clsInitAlignAspL3 = (gNhaAspL, gNnaYiAspL, gNnhaAspL, gNghaAspL)
+    { aboveNormS = point(bb.width/2+115m, bb.top+90m-44m) ;
+      aboveTopS  = point(bb.width/2+115m, bb.top+320m-44m) ;
+      aboveDescS = point(bb.width/2+115m, bb.top+340m-44m) ;
+      belowNormS = point(bb.width/2+115m, bb.bottom-320m) ;
+      belowTopS  = point(bb.width/2+115m, bb.bottom-90m) ;
+      belowDescS = point(bb.width/2+115m, bb.bottom-70m) } ;
+
+  clsInitAlignAspL4 = (gMhaChuxAspL,
+                       gNhaChuxAspL, gNnhaChuxAspL,
+                       gNghaChuxAspL)
+    { aboveNormS = point(bb.width/2+10m, bb.top+90m-44m) ;
+      aboveTopS  = point(bb.width/2+10m, bb.top+320m-44m) ;
+      aboveDescS = point(bb.width/2+10m, bb.top+340m-44m) ;
+      belowNormS = point(bb.width/2+10m, bb.bottom-320m) ;
+      belowTopS  = point(bb.width/2+10m, bb.bottom-90m) ;
+      belowDescS = point(bb.width/2+10m, bb.bottom-70m) } ;
+
 /* modifiers */
   gNasal = postscript("miao_nasal");  // U+16F50·𖽐
   gAsp = postscript("miao_asp");  // U+16F51·	𖽑
@@ -324,7 +461,7 @@ gZzya, gZzsya, gWa, gAh, gHha
 
   clsAsp = (gAsp, gVoiRef, gAspRef);
   clsAspHi = (gAsp, gVoiRef)
-    { aspHiM = point(bb.left, bb.top) } ;
+    { aspHiM  = point(bb.left,  bb.top) } ;
   clsAspLo = (gAspRef)
     { aspLoM = point(bb.left, bb.bottom) } ;
 
@@ -546,6 +683,12 @@ table(feature)
     id = "salt";
     name.LG_USENG = string("Stylistic alternates");
   }
+/* aspiration marker always on the right */
+  aspr {
+    id = "aspr";
+    name.LG_USENG = string("Aspiration always on right");
+  }
+
 /* features for Latin; irrelevant for Miao*/
   smcp {
     id = "smcp";
@@ -566,12 +709,12 @@ table(sub)
   _ clsInit clsAsp gNasal > gNasal:4 @2 @3 _ ; // reorder nasalization marker to come before syllable initial if there is an intervening aspiration mark (technically a typing error but rule included just in case)
   clsPosMark > clsPos / clsFina _ ; // turn position marker into its corresponding zero-width blank glyph when after a final
 
-/* features for Miao */
-  if (salt)
-    clsInitSaltStd > clsInitSalt ;
-  endif;
+/* salt and chux features for Miao */
   if (chux)
     clsWartStd > clsWartChux ;
+  endif;
+  if (salt)
+    clsInitSaltStd > clsInitSalt ;
   endif;
 
 /* features for Latin, irrelevant for Miao */
@@ -594,13 +737,22 @@ table(sub)
   clsFina > clsFinaYcmp / _ [clsFina? clsFina]? gAbove ; // turn final into corresponding y-axis compressed glyph when about to be positioned above initial
   clsFina > clsFinaYcmp / _ [clsFina? clsFina]? gBelow ; // turn final into corresponding y-axis compressed glyph when about to be positioned below initial
  endpass;
+
+ pass(3)
+/* aspiration right feature for Miao */
+  if (aspr) // all high aspiration markers on the right
+    // do nothing
+  else // high aspiration markers on left for ma and na based letters
+    clsInitAspLStd gAsp > clsInitAspL:(1 2) _ ;
+  endif;
+ endpass; //pass3
 endtable;
 
 table(pos) { MUnits = 1000 }
  pass(1)
 /* attach aspiration mark to initial; doesn't require context section as nasal marker is reordered before this */
   clsInit clsAspHi {attach {to=@1; at=aspHiS; with=aspHiM; 
-    level = 1}} ;
+    level = 1}} ; // doesn't apply to AspL nasal initials as clsAspHi no longer there
   clsInit clsAspLo {attach {to=@1; at=aspLoS; with=aspLoM; 
     level = 1}} ;
  endpass; // pass1 — aspiration/voicing marks
@@ -747,9 +899,10 @@ table(pos) { MUnits = 1000 }
   clsFina {kern.x = -220m} / clsInitLoMinKern clsAspHi _ ;
   clsFina {kern.x = -300m} / clsInitLoMajKern clsAspHi _ ;
   clsFina {kern.x = -480m} / clsInitLoChuxKern clsAspHi _ ;
- endpass; //pass2 
+ endpass; //pass2
 
  pass(3)
+/* needs to be a separate pass, otherwise the finals will only either shift or kern, but not both */
 /* shift final(s) up to "tone right" position (219m, 1/3 of cap height) */
   clsFinaStdYShift {shift.y = 219m} / _ OPT_FINA_SEQ gRight ;
 /* shift final(s) up to "tone top right" position (438m, 2/3 of cap height) */
