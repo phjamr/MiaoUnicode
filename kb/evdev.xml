@@ -5482,6 +5482,23 @@
     </layout>
     <layout>
       <configItem>
+        <name>lisu</name>
+        <shortDescription>lisu</shortDescription>
+        <description>Lisu</description>
+        <countryList>
+          <iso3166Id>CN</iso3166Id>
+          <iso3166Id>MM</iso3166Id>
+          <iso3166Id>TH</iso3166Id>
+          <iso3166Id>IN</iso3166Id>
+        </countryList>
+        <languageList>
+          <iso639Id>lis</iso639Id>
+          <iso639Id>lpo</iso639Id>
+        </languageList>
+      </configItem>
+    </layout>
+    <layout>
+      <configItem>
         <name>mro</name>
         <shortDescription>mro</shortDescription>
         <description>Mro</description>

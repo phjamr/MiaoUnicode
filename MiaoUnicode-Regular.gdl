@@ -12,7 +12,7 @@ table(glyph) {AttributeOverride = true};
   gBa = postscript("miao_ba");  // U+16F01·𖼁
   gPaYi = postscript("miao_yi_pa");  // U+16F02·𖼂
   gPla = postscript("miao_pla");  // U+16F03·𖼃
-  gMa = postscript("miao_ma");  // U+16F04·𖼄
+  gMa = postscript("miao_ma");  // U+16F04·𖼄	
   gMha = postscript("miao_mha");  // U+16F05·𖼅
   gMaArch = postscript("miao_arch_ma");  // U+16F06·𖼆
   gFa = postscript("miao_fa");  // U+16F07·𖼇
@@ -661,10 +661,133 @@ gZzsaChux, gZzsyaChux, gHhaChux
   gSpace = U+0020;
   clsPnct = (gSpace, (U+0021..U+002F), (U+003A..U+003F));
 
-/* classes for stylistic sets with Latin glyphs, irrelevant for Miao */
+
+/* classes for stylistic sets with Latin & Lisu glyphs, irrelevant for Miao */
+
+/* Lisu (Fraser) Unicode range */
+/* consonants */
+  gLisuBa = postscript("lisu_ba");  // U+A4D0·ꓐ
+  gLisuPa = postscript("lisu_pa");  // U+A4D1·ꓑ
+  gLisuPha = postscript("lisu_pha");  // U+A4D2·ꓒ
+  gLisuDa = postscript("lisu_da");  // U+A4D3·ꓓ
+  gLisuTa = postscript("lisu_ta");  // U+A4D4·ꓔ
+  gLisuTha = postscript("lisu_tha");  // U+A4D5·ꓕ
+  gLisuGa = postscript("lisu_ga");  // U+A4D6·ꓖ
+  gLisuKa = postscript("lisu_ka");  // U+A4D7·ꓗ
+  gLisuKha = postscript("lisu_kha");  // U+A4D8·ꓘ
+  gLisuJa = postscript("lisu_ja");  // U+A4D9·ꓙ
+  gLisuCa = postscript("lisu_ca");  // U+A4DA·ꓚ
+  gLisuCha = postscript("lisu_cha");  // U+A4DB·ꓛ
+  gLisuDza = postscript("lisu_dza");  // U+A4DC·ꓜ
+  gLisuTsa = postscript("lisu_tsa");  // U+A4DD·ꓝ
+  gLisuTsha = postscript("lisu_tsha");  // U+A4DE·ꓞ
+  gLisuMa = postscript("lisu_ma");  // U+A4DF·ꓟ
+  gLisuNa = postscript("lisu_na");  // U+A4E0·ꓠ
+  gLisuLa = postscript("lisu_la");  // U+A4E1·ꓡ
+  gLisuSa = postscript("lisu_sa");  // U+A4E2·ꓢ
+  gLisuZha = postscript("lisu_zha");  // U+A4E3·ꓣ
+  gLisuZa = postscript("lisu_za");  // U+A4E4·ꓤ
+  gLisuNga = postscript("lisu_nga");  // U+A4E5·ꓥ
+  gLisuHa = postscript("lisu_ha");  // U+A4E6·ꓦ
+  gLisuXa = postscript("lisu_xa");  // U+A4E7·ꓧ
+  gLisuHha = postscript("lisu_hha");  // U+A4E8·ꓨ
+  gLisuFa = postscript("lisu_fa");  // U+A4E9·ꓩ
+  gLisuWa = postscript("lisu_wa");  // U+A4EA·ꓪ
+  gLisuSha = postscript("lisu_sha");  // U+A4EB·ꓫ
+  gLisuYa = postscript("lisu_ya");  // U+A4EC·ꓬ
+  gLisuGha = postscript("lisu_gha");  // U+A4ED·ꓭ
+
+/* vowels*/
+  gLisuA = postscript("lisu_a");  // U+A4EE·ꓮ
+  gLisuAe = postscript("lisu_ae");  // U+A4EF·ꓯ
+  gLisuE = postscript("lisu_e");  // U+A4F0·ꓰ
+  gLisuEu = postscript("lisu_eu");  // U+A4F1·ꓱ
+  gLisuI = postscript("lisu_i");  // U+A4F2·ꓲ
+  gLisuO = postscript("lisu_o");  // U+A4F3·ꓳ
+  gLisuU = postscript("lisu_u");  // U+A4F4·ꓴ
+  gLisuUe = postscript("lisu_ue");  // U+A4F5·ꓵ
+  gLisuUh = postscript("lisu_uh");  // U+A4F6·ꓶ
+  gLisuOe = postscript("lisu_oe");  // U+A4F7·ꓷ
+
+/* tones */
+  gLisuToneMyaTi = postscript("lisu_tone_mya_ti");  // U+A4F8·ꓸ
+  gLisuToneNaPo = postscript("lisu_tone_na_po");  // U+A4F9·ꓹ
+  gLisuToneMyaCya = postscript("lisu_tone_mya_cya");  // U+A4FA·ꓺ
+  gLisuToneMyaBo = postscript("lisu_tone_mya_bo");  // U+A4FB·ꓻ
+  gLisuToneMyaNa = postscript("lisu_tone_mya_na");  // U+A4FC·ꓼ
+  gLisuToneMyaJeu = postscript("lisu_tone_mya_jeu");  // U+A4FD·ꓽ
+
+/* punctuation*/
+  gLisuComma = postscript("lisu_comma");  // U+A4FE·꓾
+  gLisuFullStop = postscript("lisu_full_stop");  // U+A4FF·꓿
+
+/* Lisu (Fraser) letters as small capitals */
+/* consonants (small caps) */
+  gLisuBaSmcp = postscript("lisu_ba.sc");  // U+A4D0·ꓐ
+  gLisuPaSmcp = postscript("lisu_pa.sc");  // U+A4D1·ꓑ
+  gLisuPhaSmcp = postscript("lisu_pha.sc");  // U+A4D2·ꓒ
+  gLisuDaSmcp = postscript("lisu_da.sc");  // U+A4D3·ꓓ
+  gLisuTaSmcp = postscript("lisu_ta.sc");  // U+A4D4·ꓔ
+  gLisuThaSmcp = postscript("lisu_tha.sc");  // U+A4D5·ꓕ
+  gLisuGaSmcp = postscript("lisu_ga.sc");  // U+A4D6·ꓖ
+  gLisuKaSmcp = postscript("lisu_ka.sc");  // U+A4D7·ꓗ
+  gLisuKhaSmcp = postscript("lisu_kha.sc");  // U+A4D8·ꓘ
+  gLisuJaSmcp = postscript("lisu_ja.sc");  // U+A4D9·ꓙ
+  gLisuCaSmcp = postscript("lisu_ca.sc");  // U+A4DA·ꓚ
+  gLisuChaSmcp = postscript("lisu_cha.sc");  // U+A4DB·ꓛ
+  gLisuDzaSmcp = postscript("lisu_dza.sc");  // U+A4DC·ꓜ
+  gLisuTsaSmcp = postscript("lisu_tsa.sc");  // U+A4DD·ꓝ
+  gLisuTshaSmcp = postscript("lisu_tsha.sc");  // U+A4DE·ꓞ
+  gLisuMaSmcp = postscript("lisu_ma.sc");  // U+A4DF·ꓟ
+  gLisuNaSmcp = postscript("lisu_na.sc");  // U+A4E0·ꓠ
+  gLisuLaSmcp = postscript("lisu_la.sc");  // U+A4E1·ꓡ
+  gLisuSaSmcp = postscript("lisu_sa.sc");  // U+A4E2·ꓢ
+  gLisuZhaSmcp = postscript("lisu_zha.sc");  // U+A4E3·ꓣ
+  gLisuZaSmcp = postscript("lisu_za.sc");  // U+A4E4·ꓤ
+  gLisuNgaSmcp = postscript("lisu_nga.sc");  // U+A4E5·ꓥ
+  gLisuHaSmcp = postscript("lisu_ha.sc");  // U+A4E6·ꓦ
+  gLisuXaSmcp = postscript("lisu_xa.sc");  // U+A4E7·ꓧ
+  gLisuHhaSmcp = postscript("lisu_hha.sc");  // U+A4E8·ꓨ
+  gLisuFaSmcp = postscript("lisu_fa.sc");  // U+A4E9·ꓩ
+  gLisuWaSmcp = postscript("lisu_wa.sc");  // U+A4EA·ꓪ
+  gLisuShaSmcp = postscript("lisu_sha.sc");  // U+A4EB·ꓫ
+  gLisuYaSmcp = postscript("lisu_ya.sc");  // U+A4EC·ꓬ
+  gLisuGhaSmcp = postscript("lisu_gha.sc");  // U+A4ED·ꓭ
+
+/* vowels (small caps) */
+  gLisuASmcp = postscript("lisu_a.sc");  // U+A4EE·ꓮ
+  gLisuAeSmcp = postscript("lisu_ae.sc");  // U+A4EF·ꓯ
+  gLisuESmcp = postscript("lisu_e.sc");  // U+A4F0·ꓰ
+  gLisuEuSmcp = postscript("lisu_eu.sc");  // U+A4F1·ꓱ
+  gLisuISmcp = postscript("lisu_i.sc");  // U+A4F2·ꓲ
+  gLisuOSmcp = postscript("lisu_o.sc");  // U+A4F3·ꓳ
+  gLisuUSmcp = postscript("lisu_u.sc");  // U+A4F4·ꓴ
+  gLisuUeSmcp = postscript("lisu_ue.sc");  // U+A4F5·ꓵ
+  gLisuUhSmcp = postscript("lisu_uh.sc");  // U+A4F6·ꓶ
+  gLisuOeSmcp = postscript("lisu_oe.sc");  // U+A4F7·ꓷ
+
+clsLisuLetters = (
+gLisuBa, gLisuPa, gLisuPha, gLisuDa, gLisuTa, gLisuTha, gLisuGa, gLisuKa, gLisuKha, gLisuJa, gLisuCa, gLisuCha, gLisuDza, gLisuTsa, gLisuTsha, gLisuMa, gLisuNa, gLisuLa, gLisuSa, gLisuZha, gLisuZa, gLisuNga, gLisuHa, gLisuXa, gLisuHha, gLisuFa, gLisuWa, gLisuSha, gLisuYa, gLisuGha, gLisuA, gLisuAe, gLisuE, gLisuEu, gLisuI, gLisuO, gLisuU, gLisuUe, gLisuUh, gLisuOe
+);
+
+clsLisuTones = (
+gLisuToneMyaTi, gLisuToneNaPo, gLisuToneMyaCya, gLisuToneMyaBo, gLisuToneMyaNa, gLisuToneMyaJeu
+);
+
+clsLisuPunct = (
+gLisuComma, gLisuFullStop
+);
+
+clsLisuLettersSC = (
+gLisuBaSmcp, gLisuPaSmcp, gLisuPhaSmcp, gLisuDaSmcp, gLisuTaSmcp, gLisuThaSmcp, gLisuGaSmcp, gLisuKaSmcp, gLisuKhaSmcp, gLisuJaSmcp, gLisuCaSmcp, gLisuChaSmcp, gLisuDzaSmcp, gLisuTsaSmcp, gLisuTshaSmcp, gLisuMaSmcp, gLisuNaSmcp, gLisuLaSmcp, gLisuSaSmcp, gLisuZhaSmcp, gLisuZaSmcp, gLisuNgaSmcp, gLisuHaSmcp, gLisuXaSmcp, gLisuHhaSmcp, gLisuFaSmcp, gLisuWaSmcp, gLisuShaSmcp, gLisuYaSmcp, gLisuGhaSmcp, gLisuASmcp, gLisuAeSmcp, gLisuESmcp, gLisuEuSmcp, gLisuISmcp, gLisuOSmcp, gLisuUSmcp, gLisuUeSmcp, gLisuUhSmcp, gLisuOeSmcp
+);
+
+clsLisu = (clsLisuLetters, clsLisuTones, clsLisuPunct, clsLisuLettersSC);
+
   clsLower = postscript("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "agrave", "aacute", "acircumflex","atilde", "adieresis", "amacron","abreve", "aring", "uni01CE", "uni1EA1","uni1EA3", "uni1EA5", "uni1EA7", "uni1EA9","uni1EAB", "uni1EAD", "uni1EAF", "uni1EB1","uni1EB3", "uni1EB5", "uni1EB7", "aogonek","ae", "uni0180", "uni1E07", "ccedilla","cacute", "ccircumflex", "ccaron","cdotaccent", "dcaron", "uni1E0D", "uni1E0F","dcroat", "egrave", "eacute", "ecircumflex","ecaron", "edieresis", "emacron","ebreve", "edotaccent", "uni1EB9", "uni1EBB", "uni1EBD", "uni1EBF", "uni1EC1", "uni1EC3","uni1EC5", "uni1EC7", "eogonek", "uni1E17","gcircumflex", "gbreve", "gdotaccent","uni0123", "gcaron", "uni1E21","uni00670303", "hcircumflex", "uni1E25","uni1E2B", "hbar", "igrave", "iacute","icircumflex", "itilde", "idieresis", "imacron", "i.trk", "uni01D0", "uni1EC9","uni1ECB", "iogonek", "uni012D","jcircumflex", "uni0137", "uni1E35", "lacute", "lcaron", "uni013C", "ldot", "uni1E37","uni1E39", "uni1E3B", "lslash", "uni1E43","nacute", "ncaron", "ntilde", "uni0146","uni1E45", "uni1E47", "uni1E49", "ograve","oacute", "ocircumflex", "otilde", "odieresis", "omacron", "ohungarumlaut", "uni01D1","uni1ECD", "uni1ECF", "uni1ED1", "uni1ED3","uni1ED5", "uni1ED7", "uni1ED9", "oslash","oe", "ohorn", "uni1EDB", "uni1EDD","uni1EDF", "uni1EE1", "uni1EE3", "uni01EB","uni014F", "uni1E53", "racute", "rcaron","uni0157", "uni1E5B", "uni1E5D", "uni1E5F","sacute", "scircumflex", "scaron", "uni015F", "uni0218", "uni1E61", "uni1E63","germandbls", "germandbls", "tcaron", "uni0163", "uni021B", "uni1E6D", "uni1E6F", "ugrave","uacute", "ucircumflex", "utilde", "udieresis", "umacron", "ubreve", "uring","uhungarumlaut", "uni01D4", "uni01D6","uni01D8", "uni01DA", "uni01DC", "uni1EE5","uni1EE7", "uogonek", "uhorn", "uni1EE9","uni1EEB", "uni1EED", "uni1EEF", "uni1EF1","wgrave", "wacute", "wcircumflex","wdieresis", "ygrave", "yacute","ycircumflex", "ydieresis", "uni1E8F","uni1EF5", "uni1EF7", "uni1EF9", "zacute","zcaron", "zdotaccent", "uni1E93", "eth","thorn", "uni0259");
   clsUpper = postscript("A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "Agrave", "Aacute", "Acircumflex","Atilde", "Adieresis", "Amacron","Abreve", "Aring", "uni01CD", "uni1EA0","uni1EA2", "uni1EA4", "uni1EA6", "uni1EA8","uni1EAA", "uni1EAC", "uni1EAE", "uni1EB0","uni1EB2", "uni1EB4", "uni1EB6", "Aogonek","AE", "uni0243", "uni1E06", "Ccedilla","Cacute", "Ccircumflex", "Ccaron","Cdotaccent", "Dcaron", "uni1E0C", "uni1E0E","Dcroat", "Egrave", "Eacute", "Ecircumflex","Ecaron", "Edieresis", "Emacron","Ebreve", "Edotaccent", "uni1EB8", "uni1EBA", "uni1EBC", "uni1EBE", "uni1EC0", "uni1EC2","uni1EC4", "uni1EC6", "Eogonek", "uni1E16","Gcircumflex", "Gbreve", "Gdotaccent","uni0122", "Gcaron", "uni1E20","uni00470303", "Hcircumflex", "uni1E24","uni1E2A", "Hbar", "Igrave", "Iacute","Icircumflex", "Itilde", "Idieresis", "Imacron", "Idotaccent", "uni01CF", "uni1EC8","uni1ECA", "Iogonek", "uni012C","Jcircumflex", "uni0136", "uni1E34", "Lacute", "Lcaron", "uni013B", "Ldot", "uni1E36","uni1E38", "uni1E3A", "Lslash", "uni1E42","Nacute", "Ncaron", "Ntilde", "uni0145","uni1E44", "uni1E46", "uni1E48", "Ograve","Oacute", "Ocircumflex", "Otilde", "Odieresis", "Omacron", "Ohungarumlaut", "uni01D1","uni1ECC", "uni1ECE", "uni1ED0", "uni1ED2","uni1ED4", "uni1ED6", "uni1ED8", "Oslash","OE", "Ohorn", "uni1EDA", "uni1EDC","uni1EDE", "uni1EE0", "uni1EE2", "uni01EA","uni014E", "uni1E52", "Racute", "Rcaron","uni0156", "uni1E5A", "uni1E5C", "uni1E5E","Sacute", "Scircumflex", "Scaron", "uni015E", "uni0218", "uni1E60", "uni1E62","germandbls", "uni1E9E", "Tcaron", "uni0162", "uni021A", "uni1E6C", "uni1E6E", "Ugrave","Uacute", "Ucircumflex", "Utilde", "Udieresis", "Umacron", "Ubreve", "Uring","Uhungarumlaut", "uni01D3", "uni01D5","uni01D7", "uni01D9", "uni01DB", "uni1EE4","uni1EE6", "Uogonek", "Uhorn", "uni1EE8","uni1EEA", "uni1EEC", "uni1EEE", "uni1EF0","Wgrave", "Wacute", "Wcircumflex","Wdieresis", "Ygrave", "Yacute","Ycircumflex", "Ydieresis", "uni1E8E","uni1EF4", "uni1EF6", "uni1EF8", "Zacute","Zcaron", "Zdotaccent", "uni1E92", "Eth","Thorn", "uni018F");
   clsSC = postscript("A.sc", "B.sc", "C.sc", "D.sc", "E.sc", "F.sc", "G.sc", "H.sc", "I.sc", "J.sc", "K.sc", "L.sc", "M.sc", "N.sc", "O.sc", "P.sc", "Q.sc", "R.sc", "S.sc", "T.sc", "U.sc", "V.sc", "W.sc", "X.sc", "Y.sc", "Z.sc", "Agrave.sc", "Aacute.sc", "Acircumflex.sc","Atilde.sc", "Adieresis.sc", "Amacron.sc","Abreve.sc", "Aring.sc", "uni01CD.sc", "uni1EA0.sc","uni1EA2.sc", "uni1EA4.sc", "uni1EA6.sc", "uni1EA8.sc","uni1EAA.sc", "uni1EAC.sc", "uni1EAE.sc", "uni1EB0.sc","uni1EB2.sc", "uni1EB4.sc", "uni1EB6.sc", "Aogonek.sc","AE.sc", "uni0243.sc", "uni1E06.sc", "Ccedilla.sc","Cacute.sc", "Ccircumflex.sc", "Ccaron.sc","Cdotaccent.sc", "Dcaron.sc", "uni1E0C.sc", "uni1E0E.sc","Dcroat.sc", "Egrave.sc", "Eacute.sc", "Ecircumflex.sc","Ecaron.sc", "Edieresis.sc", "Emacron.sc","Ebreve.sc", "Edotaccent.sc", "uni1EB8.sc", "uni1EBA.sc", "uni1EBC.sc", "uni1EBE.sc", "uni1EC0.sc", "uni1EC2.sc","uni1EC4.sc", "uni1EC6.sc", "Eogonek.sc", "uni1E16.sc","Gcircumflex.sc", "Gbreve.sc", "Gdotaccent.sc","uni0122.sc", "Gcaron.sc", "uni1E20.sc","uni00470303.sc", "Hcircumflex.sc", "uni1E24.sc","uni1E2A.sc", "Hbar.sc", "Igrave.sc", "Iacute.sc","Icircumflex.sc", "Itilde.sc", "Idieresis.sc", "Imacron.sc", "Idotaccent.sc", "uni01CF.sc", "uni1EC8.sc","uni1ECA.sc", "Iogonek.sc", "uni012C.sc","Jcircumflex.sc", "uni0136.sc", "uni1E34.sc", "Lacute.sc", "Lcaron.sc", "uni013B.sc", "Ldot.sc", "uni1E36.sc","uni1E38.sc", "uni1E3A.sc", "Lslash.sc", "uni1E42.sc","Nacute.sc", "Ncaron.sc", "Ntilde.sc", "uni0145.sc","uni1E44.sc", "uni1E46.sc", "uni1E48.sc", "Ograve.sc","Oacute.sc", "Ocircumflex.sc", "Otilde.sc", "Odieresis.sc", "Omacron.sc", "Ohungarumlaut.sc", "uni01D1.sc","uni1ECC.sc", "uni1ECE.sc", "uni1ED0.sc", "uni1ED2.sc","uni1ED4.sc", "uni1ED6.sc", "uni1ED8.sc", "Oslash.sc","OE.sc", "Ohorn.sc", "uni1EDA.sc", "uni1EDC.sc","uni1EDE.sc", "uni1EE0.sc", "uni1EE2.sc", "uni01EA.sc","uni014E.sc", "uni1E52.sc", "Racute.sc", "Rcaron.sc","uni0156.sc", "uni1E5A.sc", "uni1E5C.sc", "uni1E5E.sc","Sacute.sc", "Scircumflex.sc", "Scaron.sc", "uni015E.sc", "uni0218.sc", "uni1E60.sc", "uni1E62.sc","germandbls.sc", "uni1E9E.sc", "Tcaron.sc", "uni0162.sc", "uni021A.sc", "uni1E6C.sc", "uni1E6E.sc", "Ugrave.sc","Uacute.sc", "Ucircumflex.sc", "Utilde.sc", "Udieresis.sc", "Umacron.sc", "Ubreve.sc", "Uring.sc","Uhungarumlaut.sc", "uni01D3.sc", "uni01D5.sc","uni01D7.sc", "uni01D9.sc", "uni01DB.sc", "uni1EE4.sc","uni1EE6.sc", "Uogonek.sc", "Uhorn.sc", "uni1EE8.sc","uni1EEA.sc", "uni1EEC.sc", "uni1EEE.sc", "uni1EF0.sc","Wgrave.sc", "Wacute.sc", "Wcircumflex.sc","Wdieresis.sc", "Ygrave.sc", "Yacute.sc","Ycircumflex.sc", "Ydieresis.sc", "uni1E8E.sc","uni1EF4.sc", "uni1EF6.sc", "uni1EF8.sc", "Zacute.sc","Zcaron.sc", "Zdotaccent.sc", "uni1E92.sc", "Eth.sc","Thorn.sc", "uni018F.sc");
+
   clsLnum = postscript("zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine");
   clsOnum = postscript("zero.onum", "one.onum", "two.onum", "three.onum", "four.onum", "five.onum", "six.onum", "seven.onum", "eight.onum", "nine.onum");
   clsSCnum = postscript("zero.sc", "one.sc", "two.sc", "three.sc", "four.sc", "five.sc", "six.sc","seven.sc", "eight.sc", "nine.sc");
@@ -696,7 +819,7 @@ table(feature)
   }
   c2sc {
     id = "c2sc";
-    name.LG_USENG = string("All small caps");
+    name.LG_USENG = string("Caps to small caps");
   }
   onum {
     id = "onum";
@@ -720,10 +843,11 @@ table(sub)
 /* features for Latin, irrelevant for Miao */
   if (smcp)
     clsLower > clsSC ;
+    clsLisuLetters > clsLisuLettersSC ;
   endif;
   if (c2sc)
-    clsLower > clsSC ;
     clsUpper > clsSC ;
+    clsLisuLetters > clsLisuLettersSC ;
     clsLnum > clsSCnum ;
     clsUpperPnct > clsSCPnct ;
   endif;
